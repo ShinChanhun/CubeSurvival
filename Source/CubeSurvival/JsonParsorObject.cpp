@@ -24,28 +24,20 @@ void UJsonParsorObject::Write(FString path)
 
 TArray<FMapData> UJsonParsorObject::GenerateStructsFromJson(FString Path){	TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(JsonFullPath(Path));
 	TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject);
+
 	TArray<FMapData> MapDataStruct;
 	if (FJsonSerializer::Deserialize(JsonReader, JsonObject) && JsonObject.IsValid())
 	{
 		GenerateStructsFromJson(MapDataStruct, JsonObject);
 	}
 	else {
-
+		
 	}
 
 	return MapDataStruct;
 }
 
-void UJsonParsorObject::Read(FString path)
-{
-
-}
-
-
-void UJsonParsorObject::GenerateStructsFromJson(
-	TArray<FMapData> &AwesomeStructs,
-	TSharedPtr<FJsonObject> JsonObject
-)
+void UJsonParsorObject::GenerateStructsFromJson(TArray<FMapData> &MapDataStructs, TSharedPtr<FJsonObject> JsonObject)
 {
 	FVector PrevEndPoint = FVector{ 0,0,0 };
 	TArray<TSharedPtr<FJsonValue>> objArray = JsonObject->GetArrayField(TEXT("MapDataStructs"));
@@ -63,7 +55,7 @@ void UJsonParsorObject::GenerateStructsFromJson(
 			MapDataType
 		);
 
-		AwesomeStructs.Push(MapDataStruct);
+		MapDataStructs.Push(MapDataStruct);
 	}
 }
 
