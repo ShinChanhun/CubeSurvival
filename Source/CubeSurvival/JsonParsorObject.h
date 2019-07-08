@@ -40,22 +40,18 @@ public:
 UCLASS()
 class CUBESURVIVAL_API UJsonParsorObject : public UObject
 {
-	GENERATED_BODY()
-	
-	
+	GENERATED_BODY()	
 public:
 	void Write(FString path);
 	void Read(FString path);
 
 	TArray<FMapData> GenerateStructsFromJson(FString Path);
-	void GenerateStructsFromJson(TArray<FMapData> &MapDataStructs, TSharedPtr<FJsonObject> JsonObject);
+
 private:
-
-
+	void GenerateStructsFromJson(TArray<FMapData> &MapDataStructs, TSharedPtr<FJsonObject> JsonObject);
+	
 	FString JsonFullPath(FString Path);
-
 	FVector ParseAsVector(TSharedPtr<FJsonObject> json, FString KeyName);
-
 	FRotator ParseAsRotator(TSharedPtr<FJsonObject> json, FString KeyName);
 	
 };

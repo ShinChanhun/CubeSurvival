@@ -3,4 +3,5 @@
 #include "CubeSurvival.h"
 #include "Modules/ModuleManager.h"
 
+DEFINE_LOG_CATEGORY(CubeSurvival)
 IMPLEMENT_PRIMARY_GAME_MODULE( FDefaultGameModuleImpl, CubeSurvival, "CubeSurvival" );

@@ -8,10 +8,11 @@ void UJsonParsorObject::Write(FString path)
 	TSharedRef<TJsonWriter<TCHAR>> jsonObj = TJsonWriterFactory<>::Create(&jsonstr);
 	jsonObj->WriteObjectStart();
 	
-	const TArray<int32> arr = {1,2,3};
+	TArray<int32> arr = {1,2,3};
 	//FJsonValueArray a = new FJsonValueArray(,);
 
 	jsonObj->WriteValue("a", arr);	// Value type : bool, int, float, string
+	//jsonObj->
 
 	//jsonObj
 
@@ -19,6 +20,20 @@ void UJsonParsorObject::Write(FString path)
 	jsonObj->Close();
 
 	FFileHelper::SaveStringToFile(*jsonstr, *path);	// Save json to filePath
+}
+
+TArray<FMapData> UJsonParsorObject::GenerateStructsFromJson(FString Path){	TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(JsonFullPath(Path));
+	TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject);
+	TArray<FMapData> MapDataStruct;
+	if (FJsonSerializer::Deserialize(JsonReader, JsonObject) && JsonObject.IsValid())
+	{
+		GenerateStructsFromJson(MapDataStruct, JsonObject);
+	}
+	else {
+
+	}
+
+	return MapDataStruct;
 }
 
 void UJsonParsorObject::Read(FString path)
@@ -54,7 +69,6 @@ void UJsonParsorObject::GenerateStructsFromJson(
 
 FString UJsonParsorObject::JsonFullPath(FString Path)
 {
-	// Games/Content/****.json
 	FString FullPath = FPaths::GameContentDir();
 	FullPath += Path;
 	FString JsonStr;
