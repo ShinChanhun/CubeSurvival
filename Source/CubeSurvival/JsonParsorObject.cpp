@@ -2,24 +2,27 @@
 
 #include "JsonParsorObject.h"
 
+
 void UJsonParsorObject::Write(FString path)
 {
-	FString jsonstr;	// Recive save json text
+	FString jsonstr;
 	TSharedRef<TJsonWriter<TCHAR>> jsonObj = TJsonWriterFactory<>::Create(&jsonstr);
 	jsonObj->WriteObjectStart();
 	
+
+
 	TArray<int32> arr = {1,2,3};
-	//FJsonValueArray a = new FJsonValueArray(,);
+	
+	jsonObj->WriteValue("a", arr);
 
-	jsonObj->WriteValue("a", arr);	// Value type : bool, int, float, string
-	//jsonObj->
 
-	//jsonObj
 
 	jsonObj->WriteObjectEnd();
 	jsonObj->Close();
 
-	FFileHelper::SaveStringToFile(*jsonstr, *path);	// Save json to filePath
+	FString DirectoryFilePath = FPaths::GameDir() + path;
+
+	FFileHelper::SaveStringToFile(*jsonstr, *DirectoryFilePath);
 }
 
 TArray<FMapData> UJsonParsorObject::GenerateStructsFromJson(FString Path){	TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(JsonFullPath(Path));

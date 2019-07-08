@@ -42,6 +42,7 @@ class CUBESURVIVAL_API UJsonParsorObject : public UObject
 {
 	GENERATED_BODY()	
 public:
+
 	void Write(FString path);
 	void Read(FString path);
 
