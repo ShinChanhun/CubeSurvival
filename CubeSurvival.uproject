@@ -4,10 +4,14 @@
 	"Category": "",
 	"Description": "",
 	"Modules": [
-		{
-			"Name": "CubeSurvival",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
+    {
+      "Name": "CubeSurvival",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "AdditionalDependencies": [
+        "Engine",
+        "CoreUObject"
+      ]
+    }
 	]
 }
