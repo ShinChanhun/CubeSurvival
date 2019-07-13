@@ -25,16 +25,20 @@ void UJsonParsorObject::Write(FString path)
 	FFileHelper::SaveStringToFile(*jsonstr, *DirectoryFilePath);
 }
 
-TArray<FMapData> UJsonParsorObject::GenerateStructsFromJson(FString Path){	TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(JsonFullPath(Path));
+TArray<FMapData> UJsonParsorObject::GenerateStructsFromJson(FString Path)
+{
+	TSharedRef<TJsonReader<TCHAR>> JsonReader = TJsonReaderFactory<TCHAR>::Create(JsonFullPath(Path));
 	TSharedPtr<FJsonObject> JsonObject = MakeShareable(new FJsonObject);
 
-	TArray<FMapData> MapDataStruct;
+	TArray<FMapData> MapDataStruct;
+
 	if (FJsonSerializer::Deserialize(JsonReader, JsonObject) && JsonObject.IsValid())
 	{
 		GenerateStructsFromJson(MapDataStruct, JsonObject);
 	}
-	else {
-		
+	else 
+	{
+		//CSLOG(WARNING_LOCATION, TEXT("Error : Could not open json file"));
 	}
 
 	return MapDataStruct;
@@ -53,7 +57,7 @@ void UJsonParsorObject::GenerateStructsFromJson(TArray<FMapData> &MapDataStructs
 		FVector  MapDataPosition = ParseAsVector(json, FString("MapPosition"));
 		FString  MapDataType = json->GetStringField(TEXT("MapType"));
 
-		FMapData MapDataStruct = FMapData::CreateFMapDataStruct(
+		FMapData MapDataStruct = FMapData::CreateMapDataStruct(
 			MapDataPosition, 
 			MapDataType
 		);

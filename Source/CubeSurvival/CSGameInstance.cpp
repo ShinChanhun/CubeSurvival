@@ -6,8 +6,22 @@
 
 void UCSGameInstance::OnStart()
 {
-	UJsonParsorObject * jpo = (UJsonParsorObject*)GetTransientPackage();
 
-	jpo->Write("aa");
+	//UJsonParsorObject* jpo = NewObject<UJsonParsorObject>();
 
+	//TSharedPtr<UJsonParsorObject> jpo = MakeShareable(NewObject<UJsonParsorObject>());
+	////TSharedPtr<UJsonParsorObject> jpo = MakeShareable(NewObject<UJsonParsorObject>());
+	////jpo->Write("aa");
+	//jpo->Write("aa");
+
+	//mm = MakeShareable(NewObject<UMapManager>());
+
+
+}
+
+void UCSGameInstance::TestFunction()
+{
+	UE_LOG(LogTemp, Log, TEXT("Log Message-----------------------------------------"));
+
+	//CSLOG();
 }

@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "CubeSurvival.h"
 #include "UObject/NoExportTypes.h"
 #include "Json.h"
 #include "JsonParsorObject.generated.h"
@@ -20,7 +20,7 @@ public:
 	FString Type;
 
 public:
-	static FMapData CreateFMapDataStruct(
+	static FMapData CreateMapDataStruct(
 		FVector position,
 		FString type
 	)
@@ -44,8 +44,6 @@ class CUBESURVIVAL_API UJsonParsorObject : public UObject
 public:
 
 	void Write(FString path);
-	void Read(FString path);
-
 	TArray<FMapData> GenerateStructsFromJson(FString Path);
 
 private:
