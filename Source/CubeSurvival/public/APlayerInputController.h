@@ -17,16 +17,19 @@ public:
 
 protected:
 	// Called when the game starts or when spawned
+
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	virtual void PostInitializeComponents() override;
+	
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	void KnockBack(FVector HitLocation);
 private:
 	void UpDown(float NewAxisValue);
 	void LeftRight(float NewAxisValue);
@@ -41,13 +44,13 @@ private:
 	void Dash();
 
 	UFUNCTION()
-		void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
+	void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
 
 	void SetControlMode(int32 controlMode);
 
 	void AttackStartComboState();
 	void AttackEndComboState();
-
+	void AttackCheck();
 
 
 public:
@@ -85,7 +88,10 @@ private:
 		int32 MaxCombo;
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		bool IsDash;
+	bool IsDash;
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Damage, Meta = (AllowPrivateAccess = true))
+	bool IsDamaged;
 
 	UPROPERTY()
 		class UUNanaAnimInstance* PlayerAnim;

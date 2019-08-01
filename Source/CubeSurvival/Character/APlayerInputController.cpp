@@ -4,13 +4,17 @@
 #include "UCharacterObject.h"
 #include "UNanaAnimInstance.h"
 #include "AWeaponActor.h"
-
+#include "DrawDebugHelpers.h"
+#include "UNomalMonsterAnimInstance.h"
+#include "CSNormalMonsterCharacter.h"
 // Sets default values
 AAPlayerInputController::AAPlayerInputController()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 	PlayerCharacter = CreateDefaultSubobject<UUCharacterObject>(TEXT("PlayerModel"));
+
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
 	CharacterMovements = Cast<UCharacterMovementComponent>(GetCharacterMovement());
@@ -21,6 +25,8 @@ AAPlayerInputController::AAPlayerInputController()
 	SetControlMode(0);
 	SpringArm->TargetArmLength = CameraZoom;
 	SpringArm->SetRelativeRotation(FRotator(-30.0f, 0.0f, 0.0f));
+	SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, 80.0f));
+	//PlayerCharacter->GetMonsterMesh()[TEXT("02020002_m_redmushroom")];
 
 	if (PlayerCharacter != NULL)
 	{
@@ -30,8 +36,10 @@ AAPlayerInputController::AAPlayerInputController()
 		GetMesh()->SetAnimInstanceClass(PlayerCharacter->GetPlayerAnimClass());
 	}
 	//test = PlayerCharacter->Weapon;
-
+	//this->Tags.AddUnique(TEXT("Player"));
+	GetCapsuleComponent()->ComponentTags.AddUnique(TEXT("Player"));
 	GetCharacterMovement()->JumpZVelocity = 600.0f;
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("CSCharacter"));
 	CharacterSpeed = 600.0f;
 	CharacterDashSpeed = 1.0f;
 	IsAttacking = false;
@@ -44,6 +52,7 @@ AAPlayerInputController::AAPlayerInputController()
 void AAPlayerInputController::BeginPlay()
 {
 	Super::BeginPlay();
+
 	CharacterMovements->MaxWalkSpeed = CharacterSpeed;
 	//무기 소켓
 	FName WeaponSocket(TEXT("hand_socket_R"));
@@ -53,7 +62,7 @@ void AAPlayerInputController::BeginPlay()
 	{
 		weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocket);
 	}
-	
+
 }
 
 void AAPlayerInputController::PostInitializeComponents()
@@ -71,10 +80,14 @@ void AAPlayerInputController::PostInitializeComponents()
 		PlayerAnim->JumpToAttackMontageSection(CurrentCombo);
 	}
 	});
+
 	PlayerAnim->OnDash.AddLambda([this]()->void {PlayerAnim->SetDash(false);
 	PlayerAnim->Montage_Stop(0.3f, PlayerAnim->GetDashMontage());
 	PlayerAnim->DashSpeed = 1.0f;
 	});
+
+	//AddUObject UObject 기반 멤버 함수 델리게이트를 추가합니다. UObject 델리게이트는 자신의 오브젝트에 대한 약 레퍼런스를 유지합니다.
+	PlayerAnim->OnAttackHitCheck.AddUObject(this, &AAPlayerInputController::AttackCheck);
 }
 
 // Called every frame
@@ -109,28 +122,44 @@ void AAPlayerInputController::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 void AAPlayerInputController::UpDown(float NewAxisValue)
 {
+	if(PlayerAnim->GetDamage() == true)
+	{
+		return;
+	}
 	AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
 }
 
 void AAPlayerInputController::LeftRight(float NewAxisValue)
 {
+	if (PlayerAnim->GetDamage() == true)
+	{
+		return;
+	}
 	AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::Y), NewAxisValue);
 }
 
 void AAPlayerInputController::LookUp(float NewAxisValue)
 {
+	if (PlayerAnim->GetDamage() == true)
+	{
+		return;
+	}
 	AddControllerPitchInput(NewAxisValue);
 }
 
 void AAPlayerInputController::Turn(float NewAxisValue)
 {
+	if (PlayerAnim->GetDamage() == true)
+	{
+		return;
+	}
 	AddControllerYawInput(NewAxisValue);
 }
 
 void AAPlayerInputController::Jump()
 {
 
-	if (PlayerAnim->GetJumpFinish() == true)
+	if (PlayerAnim->GetJumpFinish() == true|| PlayerAnim->GetDamage() == true)
 	{
 		return;
 	}
@@ -168,7 +197,7 @@ void AAPlayerInputController::ZoomOut()
 
 void AAPlayerInputController::Dash()
 {
-	if (PlayerAnim->GetDash() == true || IsAttacking == true || PlayerAnim->GetCurrentPawnSpeed() == 0.0f || PlayerAnim->GetIsInAir() == true)
+	if (PlayerAnim->GetDash() == true || IsAttacking == true || PlayerAnim->GetCurrentPawnSpeed() == 0.0f || PlayerAnim->GetIsInAir() == true|| PlayerAnim->GetDamage()==true)
 		return;
 
 
@@ -205,9 +234,68 @@ void AAPlayerInputController::Attatck()
 	}
 }
 
+void AAPlayerInputController::AttackCheck()
+{
+
+	FHitResult HitResult;
+	FCollisionQueryParams Parms(NAME_None, false, this);
+	bool bResult = GetWorld()->SweepSingleByChannel(HitResult, GetActorLocation(), GetActorLocation() + GetActorForwardVector()*200.0f,
+		FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel12, FCollisionShape::MakeSphere(50.0f), Parms);
+
+
+
+
+#if ENABLE_DRAW_DEBUG
+
+	//FVector TracVec = GetActorForwardVector()*200.0f;
+	//FVector Center = GetActorLocation() + TracVec * 0.5f;
+	//FColor DrawColor = bResult ? FColor::Green : FColor::Red;
+	//float LiftTime = 5.0f;
+	//DrawDebugSphere(GetWorld(), Center, 50.0f, 32.0f, DrawColor, false, LiftTime);
+
+	FVector TraceVec = GetActorForwardVector()* 200.0f;
+	FVector Center = GetActorLocation() + TraceVec * 0.5f;
+	float HalfHeight = 200.0f*0.5f + 50.0f;
+	FQuat CapsuleRot = FRotationMatrix::MakeFromZ(TraceVec).ToQuat();
+	FColor DrawColor = bResult ? FColor::Green : FColor::Red;
+	float LiftTime = 5.0f;
+	DrawDebugCapsule(GetWorld(), Center, HalfHeight, 50.0f, CapsuleRot, DrawColor, false, LiftTime);
+
+#endif
+	if (bResult)
+	{//if (Target->GrassTrigger->ComponentHasTag(FName(TEXT("Grass"))))
+		if (HitResult.Actor.IsValid())
+		{
+			if (HitResult.GetActor()->ActorHasTag(FName(TEXT("NormalMonster"))))
+			{
+				auto Monster = Cast<ACSNormalMonsterCharacter>(HitResult.GetActor());
+				if (Monster == nullptr)
+				{
+					UE_LOG(LogTemp, Log, TEXT("Null2"));
+					return;
+				}
+				auto MonsterAnim = Cast<UUNomalMonsterAnimInstance>(Monster->GetMesh()->GetAnimInstance());
+				if (MonsterAnim == nullptr)
+				{
+					UE_LOG(LogTemp, Log, TEXT("Null"));
+					return;
+				}
+
+				MonsterAnim->SetIsAttackDelayed(true);
+				MonsterAnim->SetIsDamaged(true);
+				MonsterAnim->SetIsAttacking(false);
+				//GetWorld()->GetTimerManager().SetTimer(MonsterAnim->DelayTimer, this,);
+
+			}
+			//if()
+			//if(Hit)
+		}
+	}
+}
+
 void AAPlayerInputController::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
 {
-	if (!IsAttacking||CurrentCombo<0) return;
+	if (!IsAttacking || CurrentCombo < 0) return;
 	//if(IsAttacking==false||)
 	if (PlayerAnim->GetDash() == true)
 		return;
@@ -252,6 +340,26 @@ void AAPlayerInputController::SetControlMode(int32 controlMode)
 
 		GetCharacterMovement()->bOrientRotationToMovement = true;
 		GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f);
+
+
 	}
+}
+
+void AAPlayerInputController::KnockBack(FVector HitLocation)
+{
+	FVector KnockBackDirection = GetActorLocation() - HitLocation;
+
+	//KnockBackDirection.GetSafeNormal();
+	//무적 타임 만들기
+	PlayerAnim->SetDamage(true);
+	KnockBackDirection.Normalize();
+	KnockBackDirection.Z = 0;
+	LaunchCharacter(KnockBackDirection*1500.0f, false, true);
+	//FVector out = KnockBackDirection;
+	//KnockBackDirection = KnockBackDirection.Normalize;
+	//SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation()*(KnockBackDirection*5.0f), GetWorld()->GetDeltaSeconds(), 5.0f));
+
+	//GetCharacterMovement()->AddImpulse(KnockBackDirection*10.0f, true);
+
 }
 

@@ -4,6 +4,7 @@
 
 #include "CubeSurvival.h"
 #include "GameFramework/Pawn.h"
+#include "GameFramework/FloatingPawnMovement.h"
 #include "ACharacterBase.generated.h"
 
 UCLASS()
@@ -19,9 +20,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
+public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -35,7 +37,5 @@ public:
 private:
 	float CharacterHP;
 	float CharacterMoveSpeed;
-
-	
 	
 };

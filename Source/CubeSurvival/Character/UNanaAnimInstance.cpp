@@ -9,17 +9,17 @@
 UUNanaAnimInstance::UUNanaAnimInstance()
 {
 	CurrentPawnSpeed = 0.0f;
+	DashSpeed = 1.0f;
 	IsInAir = false;
 	IsJumpFinish = false;
 	IsDash = false;
-	DashSpeed = 1.0f;
+	IsDamaged = false;
 
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("AnimMontage'/Game/Model/Player/Nana/Animations/Attack_Montage.Attack_Montage'"));
 	if (ATTACK_MONTAGE.Succeeded())
 	{
 		AttackMontage = ATTACK_MONTAGE.Object;
 	}
-	//DashMontage
 
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> Dash_MONTAGE(TEXT("AnimMontage'/Game/Model/Player/Nana/Animations/Nana_Dash_Montage.Nana_Dash_Montage'"));
 	if (Dash_MONTAGE.Succeeded())
@@ -44,10 +44,6 @@ void UUNanaAnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	}
 }
 
-float UUNanaAnimInstance::GetCurrentPawnSpeed() const
-{
-	return CurrentPawnSpeed;
-}
 
 void UUNanaAnimInstance::PlayeAttackMontage()
 {
@@ -65,37 +61,6 @@ void UUNanaAnimInstance::PlayDashMontage()
 	}
 }
 
-bool UUNanaAnimInstance::GetIsInAir() const
-{
-	return IsInAir;
-}
-
-void UUNanaAnimInstance::SetJumpFinish(bool setFinish)
-{
-	IsJumpFinish = setFinish;
-}
-
-
-bool UUNanaAnimInstance::GetJumpFinish() const
-{
-	return IsJumpFinish;
-}
-
-void UUNanaAnimInstance::SetDash(bool Dash)
-{
-	IsDash = Dash;
-}
-
-bool UUNanaAnimInstance::GetDash() const
-{
-	return IsDash;
-}
-
-UAnimMontage* UUNanaAnimInstance::GetDashMontage() const
-{
-	return DashMontage;
-}
-
 
 void UUNanaAnimInstance::AnimNotify_AttackHitCheck()
 {
@@ -104,16 +69,20 @@ void UUNanaAnimInstance::AnimNotify_AttackHitCheck()
 
 void UUNanaAnimInstance::AnimNotify_NextAttackCheck()
 {
-	//UE_LOG(LogTemp, Log, TEXT("AnimNoftify_NextAttackCheck"));
 	OnNextAttackCheck.Broadcast();
 }
-
 
 void UUNanaAnimInstance::AnimNotify_DashEnd()
 {
 	OnDash.Broadcast();
 }
 
+
+void UUNanaAnimInstance::AnimNotify_Damaged()
+{
+	//UE_LOG(LogTemp, Log, TEXT("Null3"));
+	IsDamaged = false;
+}
 
 FName UUNanaAnimInstance::GetAttackMontageSectionName(int32 Section)
 {
@@ -125,11 +94,7 @@ FName UUNanaAnimInstance::GetAttackMontageSectionName(int32 Section)
 void  UUNanaAnimInstance::JumpToAttackMontageSection(int32 newSection)
 {
 	CSCHECK(Montage_IsPlaying(AttackMontage));
-	//if (!Montage_IsPlaying(AttackMontage))
-	{
-		//UE_LOG(LogTemp, Log, TEXT("%s"), *GetAttackMontageSectionName(newSection).ToString());
-		// FName(*FString::Printf(TEXT("Attack%d")
-		//	Montage_JumpToSection(GetAttackMontageSectionName(newSection), AttackMontage);
-		Montage_JumpToSection(GetAttackMontageSectionName(newSection), AttackMontage);
-	}
+	
+	Montage_JumpToSection(GetAttackMontageSectionName(newSection), AttackMontage);
+	
 }

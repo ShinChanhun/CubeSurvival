@@ -22,55 +22,68 @@ public:
 
 	void PlayeAttackMontage();
 	void PlayDashMontage();
-
-	void SetJumpFinish(bool setFinish);
-	bool GetJumpFinish() const;
-	bool GetIsInAir() const;
-	bool GetDash() const;
-	float GetCurrentPawnSpeed() const;
 	void JumpToAttackMontageSection(int32 newSection);
 
-	void SetDash(bool Dash);
-	UAnimMontage* GetDashMontage() const;
+	inline void SetJumpFinish(bool setFinish) { IsJumpFinish = setFinish; }
+	inline bool GetJumpFinish() const { return IsJumpFinish; }
+
+	inline bool GetIsInAir() const { return IsInAir; }
+
+	inline void SetDash(bool Dash) { IsDash = Dash; }
+	inline bool GetDash() const { return IsDash; }
+
+	inline void SetDamage(bool isDamaged) { IsDamaged = isDamaged; }
+	inline bool GetDamage() const { return IsDamaged; }
+
+	inline float GetCurrentPawnSpeed() const { return CurrentPawnSpeed; }
+	inline UAnimMontage* GetDashMontage() const { return DashMontage; }
+
 private:
 	UFUNCTION()
-		void AnimNotify_AttackHitCheck();
+	void AnimNotify_AttackHitCheck();
 
 	UFUNCTION()
-		void AnimNotify_NextAttackCheck();
+	void AnimNotify_NextAttackCheck();
 
 	UFUNCTION()
-		void AnimNotify_DashEnd();
+	void AnimNotify_DashEnd();
+
+	UFUNCTION()
+	void AnimNotify_Damaged();
 
 	FName GetAttackMontageSectionName(int32 Section);
+
 public:
 	FOnNextAttackCheckDelegate OnNextAttackCheck;
 	FOnAttackHitCheckDelegate OnAttackHitCheck;
 	FOnDashDelegate OnDash;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		float DashSpeed;
+	float DashSpeed;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		float CurrentPawnSpeed;
+	float CurrentPawnSpeed;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool IsInAir;
+	bool IsInAir;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool IsDash;
+	bool IsDash;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool IsJumpFinish;
+	bool IsJumpFinish;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	bool IsDamaged;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		UAnimMontage* AttackMontage;
+	UAnimMontage* AttackMontage;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		UAnimMontage* DashMontage;
+	UAnimMontage* DashMontage;
 
 
 
