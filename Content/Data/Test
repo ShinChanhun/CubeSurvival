@@ -1,0 +1,25 @@
+{
+	"Player0":
+	{
+		"Name": "ThirdPersonCharacter_C_0",
+		"LocationX": 2713.32,
+		"LocationY": -567.316,
+		"LocationZ": 100.65,
+		"RotationYaw": 31.2313,
+		"RotationPitch": 0,
+		"RotationRoll": 0,
+		"Batteries":
+		{
+			"Count": 1,
+			"Battery0":
+			{
+				"LocationX": 798.003,
+				"LocationY": 90.9849,
+				"LocationZ": 1212.01,
+				"RotationYaw": -150.968,
+				"RotationPitch": 62.4922,
+				"RotationRoll": -7.06449
+			}
+		}
+	}
+}

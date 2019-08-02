@@ -1,0 +1,4380 @@
+{
+	"MapDataStructs": 
+	[
+		{
+			"ID": 1,
+			"Type": "1",
+			"Position": [ -12, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 2,
+			"Type": "2",
+			"Position": [ -12, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 3,
+			"Type": "3",
+			"Position": [ -12, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 4,
+			"Type": "4",
+			"Position": [ -12, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 5,
+			"Type": "5",
+			"Position": [ -12, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 6,
+			"Type": "6",
+			"Position": [ -12, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 7,
+			"Type": "7",
+			"Position": [ -12, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 8,
+			"Type": "8",
+			"Position": [ -12, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 9,
+			"Type": "9",
+			"Position": [ -12, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 10,
+			"Type": "10",
+			"Position": [ -12, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 11,
+			"Type": "11",
+			"Position": [ -12, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 12,
+			"Type": "12",
+			"Position": [ -12, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 13,
+			"Type": "13",
+			"Position": [ -12, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 14,
+			"Type": "14",
+			"Position": [ -12, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 15,
+			"Type": "15",
+			"Position": [ -12, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 16,
+			"Type": "16",
+			"Position": [ -12, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 17,
+			"Type": "17",
+			"Position": [ -12, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 18,
+			"Type": "18",
+			"Position": [ -12, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 19,
+			"Type": "19",
+			"Position": [ -12, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 20,
+			"Type": "20",
+			"Position": [ -12, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 21,
+			"Type": "21",
+			"Position": [ -12, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 22,
+			"Type": "22",
+			"Position": [ -12, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 23,
+			"Type": "23",
+			"Position": [ -12, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 24,
+			"Type": "24",
+			"Position": [ -12, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 25,
+			"Type": "25",
+			"Position": [ -12, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 26,
+			"Type": "26",
+			"Position": [ -11, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 27,
+			"Type": "27",
+			"Position": [ -11, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 28,
+			"Type": "28",
+			"Position": [ -11, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 29,
+			"Type": "29",
+			"Position": [ -11, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 30,
+			"Type": "30",
+			"Position": [ -11, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 31,
+			"Type": "31",
+			"Position": [ -11, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 32,
+			"Type": "32",
+			"Position": [ -11, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 33,
+			"Type": "33",
+			"Position": [ -11, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 34,
+			"Type": "34",
+			"Position": [ -11, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 35,
+			"Type": "35",
+			"Position": [ -11, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 36,
+			"Type": "36",
+			"Position": [ -11, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 37,
+			"Type": "37",
+			"Position": [ -11, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 38,
+			"Type": "38",
+			"Position": [ -11, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 39,
+			"Type": "39",
+			"Position": [ -11, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 40,
+			"Type": "40",
+			"Position": [ -11, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 41,
+			"Type": "41",
+			"Position": [ -11, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 42,
+			"Type": "42",
+			"Position": [ -11, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 43,
+			"Type": "43",
+			"Position": [ -11, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 44,
+			"Type": "44",
+			"Position": [ -11, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 45,
+			"Type": "45",
+			"Position": [ -11, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 46,
+			"Type": "46",
+			"Position": [ -11, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 47,
+			"Type": "47",
+			"Position": [ -11, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 48,
+			"Type": "48",
+			"Position": [ -11, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 49,
+			"Type": "49",
+			"Position": [ -11, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 50,
+			"Type": "50",
+			"Position": [ -11, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 51,
+			"Type": "51",
+			"Position": [ -10, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 52,
+			"Type": "52",
+			"Position": [ -10, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 53,
+			"Type": "53",
+			"Position": [ -10, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 54,
+			"Type": "54",
+			"Position": [ -10, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 55,
+			"Type": "55",
+			"Position": [ -10, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 56,
+			"Type": "56",
+			"Position": [ -10, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 57,
+			"Type": "57",
+			"Position": [ -10, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 58,
+			"Type": "58",
+			"Position": [ -10, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 59,
+			"Type": "59",
+			"Position": [ -10, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 60,
+			"Type": "60",
+			"Position": [ -10, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 61,
+			"Type": "61",
+			"Position": [ -10, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 62,
+			"Type": "62",
+			"Position": [ -10, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 63,
+			"Type": "63",
+			"Position": [ -10, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 64,
+			"Type": "64",
+			"Position": [ -10, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 65,
+			"Type": "65",
+			"Position": [ -10, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 66,
+			"Type": "66",
+			"Position": [ -10, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 67,
+			"Type": "67",
+			"Position": [ -10, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 68,
+			"Type": "68",
+			"Position": [ -10, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 69,
+			"Type": "69",
+			"Position": [ -10, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 70,
+			"Type": "70",
+			"Position": [ -10, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 71,
+			"Type": "71",
+			"Position": [ -10, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 72,
+			"Type": "72",
+			"Position": [ -10, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 73,
+			"Type": "73",
+			"Position": [ -10, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 74,
+			"Type": "74",
+			"Position": [ -10, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 75,
+			"Type": "75",
+			"Position": [ -10, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 76,
+			"Type": "76",
+			"Position": [ -9, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 77,
+			"Type": "77",
+			"Position": [ -9, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 78,
+			"Type": "78",
+			"Position": [ -9, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 79,
+			"Type": "79",
+			"Position": [ -9, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 80,
+			"Type": "80",
+			"Position": [ -9, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 81,
+			"Type": "81",
+			"Position": [ -9, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 82,
+			"Type": "82",
+			"Position": [ -9, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 83,
+			"Type": "83",
+			"Position": [ -9, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 84,
+			"Type": "84",
+			"Position": [ -9, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 85,
+			"Type": "85",
+			"Position": [ -9, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 86,
+			"Type": "86",
+			"Position": [ -9, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 87,
+			"Type": "87",
+			"Position": [ -9, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 88,
+			"Type": "88",
+			"Position": [ -9, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 89,
+			"Type": "89",
+			"Position": [ -9, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 90,
+			"Type": "90",
+			"Position": [ -9, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 91,
+			"Type": "91",
+			"Position": [ -9, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 92,
+			"Type": "92",
+			"Position": [ -9, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 93,
+			"Type": "93",
+			"Position": [ -9, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 94,
+			"Type": "94",
+			"Position": [ -9, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 95,
+			"Type": "95",
+			"Position": [ -9, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 96,
+			"Type": "96",
+			"Position": [ -9, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 97,
+			"Type": "97",
+			"Position": [ -9, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 98,
+			"Type": "98",
+			"Position": [ -9, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 99,
+			"Type": "99",
+			"Position": [ -9, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 100,
+			"Type": "100",
+			"Position": [ -9, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 101,
+			"Type": "101",
+			"Position": [ -8, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 102,
+			"Type": "102",
+			"Position": [ -8, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 103,
+			"Type": "103",
+			"Position": [ -8, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 104,
+			"Type": "104",
+			"Position": [ -8, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 105,
+			"Type": "105",
+			"Position": [ -8, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 106,
+			"Type": "106",
+			"Position": [ -8, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 107,
+			"Type": "107",
+			"Position": [ -8, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 108,
+			"Type": "108",
+			"Position": [ -8, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 109,
+			"Type": "109",
+			"Position": [ -8, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 110,
+			"Type": "110",
+			"Position": [ -8, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 111,
+			"Type": "111",
+			"Position": [ -8, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 112,
+			"Type": "112",
+			"Position": [ -8, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 113,
+			"Type": "113",
+			"Position": [ -8, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 114,
+			"Type": "114",
+			"Position": [ -8, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 115,
+			"Type": "115",
+			"Position": [ -8, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 116,
+			"Type": "116",
+			"Position": [ -8, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 117,
+			"Type": "117",
+			"Position": [ -8, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 118,
+			"Type": "118",
+			"Position": [ -8, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 119,
+			"Type": "119",
+			"Position": [ -8, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 120,
+			"Type": "120",
+			"Position": [ -8, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 121,
+			"Type": "121",
+			"Position": [ -8, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 122,
+			"Type": "122",
+			"Position": [ -8, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 123,
+			"Type": "123",
+			"Position": [ -8, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 124,
+			"Type": "124",
+			"Position": [ -8, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 125,
+			"Type": "125",
+			"Position": [ -8, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 126,
+			"Type": "126",
+			"Position": [ -7, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 127,
+			"Type": "127",
+			"Position": [ -7, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 128,
+			"Type": "128",
+			"Position": [ -7, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 129,
+			"Type": "129",
+			"Position": [ -7, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 130,
+			"Type": "130",
+			"Position": [ -7, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 131,
+			"Type": "131",
+			"Position": [ -7, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 132,
+			"Type": "132",
+			"Position": [ -7, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 133,
+			"Type": "133",
+			"Position": [ -7, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 134,
+			"Type": "134",
+			"Position": [ -7, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 135,
+			"Type": "135",
+			"Position": [ -7, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 136,
+			"Type": "136",
+			"Position": [ -7, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 137,
+			"Type": "137",
+			"Position": [ -7, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 138,
+			"Type": "138",
+			"Position": [ -7, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 139,
+			"Type": "139",
+			"Position": [ -7, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 140,
+			"Type": "140",
+			"Position": [ -7, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 141,
+			"Type": "141",
+			"Position": [ -7, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 142,
+			"Type": "142",
+			"Position": [ -7, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 143,
+			"Type": "143",
+			"Position": [ -7, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 144,
+			"Type": "144",
+			"Position": [ -7, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 145,
+			"Type": "145",
+			"Position": [ -7, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 146,
+			"Type": "146",
+			"Position": [ -7, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 147,
+			"Type": "147",
+			"Position": [ -7, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 148,
+			"Type": "148",
+			"Position": [ -7, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 149,
+			"Type": "149",
+			"Position": [ -7, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 150,
+			"Type": "150",
+			"Position": [ -7, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 151,
+			"Type": "151",
+			"Position": [ -6, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 152,
+			"Type": "152",
+			"Position": [ -6, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 153,
+			"Type": "153",
+			"Position": [ -6, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 154,
+			"Type": "154",
+			"Position": [ -6, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 155,
+			"Type": "155",
+			"Position": [ -6, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 156,
+			"Type": "156",
+			"Position": [ -6, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 157,
+			"Type": "157",
+			"Position": [ -6, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 158,
+			"Type": "158",
+			"Position": [ -6, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 159,
+			"Type": "159",
+			"Position": [ -6, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 160,
+			"Type": "160",
+			"Position": [ -6, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 161,
+			"Type": "161",
+			"Position": [ -6, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 162,
+			"Type": "162",
+			"Position": [ -6, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 163,
+			"Type": "163",
+			"Position": [ -6, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 164,
+			"Type": "164",
+			"Position": [ -6, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 165,
+			"Type": "165",
+			"Position": [ -6, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 166,
+			"Type": "166",
+			"Position": [ -6, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 167,
+			"Type": "167",
+			"Position": [ -6, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 168,
+			"Type": "168",
+			"Position": [ -6, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 169,
+			"Type": "169",
+			"Position": [ -6, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 170,
+			"Type": "170",
+			"Position": [ -6, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 171,
+			"Type": "171",
+			"Position": [ -6, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 172,
+			"Type": "172",
+			"Position": [ -6, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 173,
+			"Type": "173",
+			"Position": [ -6, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 174,
+			"Type": "174",
+			"Position": [ -6, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 175,
+			"Type": "175",
+			"Position": [ -6, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 176,
+			"Type": "176",
+			"Position": [ -5, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 177,
+			"Type": "177",
+			"Position": [ -5, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 178,
+			"Type": "178",
+			"Position": [ -5, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 179,
+			"Type": "179",
+			"Position": [ -5, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 180,
+			"Type": "180",
+			"Position": [ -5, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 181,
+			"Type": "181",
+			"Position": [ -5, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 182,
+			"Type": "182",
+			"Position": [ -5, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 183,
+			"Type": "183",
+			"Position": [ -5, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 184,
+			"Type": "184",
+			"Position": [ -5, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 185,
+			"Type": "185",
+			"Position": [ -5, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 186,
+			"Type": "186",
+			"Position": [ -5, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 187,
+			"Type": "187",
+			"Position": [ -5, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 188,
+			"Type": "188",
+			"Position": [ -5, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 189,
+			"Type": "189",
+			"Position": [ -5, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 190,
+			"Type": "190",
+			"Position": [ -5, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 191,
+			"Type": "191",
+			"Position": [ -5, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 192,
+			"Type": "192",
+			"Position": [ -5, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 193,
+			"Type": "193",
+			"Position": [ -5, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 194,
+			"Type": "194",
+			"Position": [ -5, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 195,
+			"Type": "195",
+			"Position": [ -5, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 196,
+			"Type": "196",
+			"Position": [ -5, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 197,
+			"Type": "197",
+			"Position": [ -5, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 198,
+			"Type": "198",
+			"Position": [ -5, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 199,
+			"Type": "199",
+			"Position": [ -5, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 200,
+			"Type": "200",
+			"Position": [ -5, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 201,
+			"Type": "201",
+			"Position": [ -4, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 202,
+			"Type": "202",
+			"Position": [ -4, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 203,
+			"Type": "203",
+			"Position": [ -4, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 204,
+			"Type": "204",
+			"Position": [ -4, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 205,
+			"Type": "205",
+			"Position": [ -4, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 206,
+			"Type": "206",
+			"Position": [ -4, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 207,
+			"Type": "207",
+			"Position": [ -4, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 208,
+			"Type": "208",
+			"Position": [ -4, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 209,
+			"Type": "209",
+			"Position": [ -4, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 210,
+			"Type": "210",
+			"Position": [ -4, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 211,
+			"Type": "211",
+			"Position": [ -4, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 212,
+			"Type": "212",
+			"Position": [ -4, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 213,
+			"Type": "213",
+			"Position": [ -4, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 214,
+			"Type": "214",
+			"Position": [ -4, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 215,
+			"Type": "215",
+			"Position": [ -4, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 216,
+			"Type": "216",
+			"Position": [ -4, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 217,
+			"Type": "217",
+			"Position": [ -4, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 218,
+			"Type": "218",
+			"Position": [ -4, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 219,
+			"Type": "219",
+			"Position": [ -4, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 220,
+			"Type": "220",
+			"Position": [ -4, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 221,
+			"Type": "221",
+			"Position": [ -4, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 222,
+			"Type": "222",
+			"Position": [ -4, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 223,
+			"Type": "223",
+			"Position": [ -4, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 224,
+			"Type": "224",
+			"Position": [ -4, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 225,
+			"Type": "225",
+			"Position": [ -4, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 226,
+			"Type": "226",
+			"Position": [ -3, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 227,
+			"Type": "227",
+			"Position": [ -3, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 228,
+			"Type": "228",
+			"Position": [ -3, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 229,
+			"Type": "229",
+			"Position": [ -3, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 230,
+			"Type": "230",
+			"Position": [ -3, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 231,
+			"Type": "231",
+			"Position": [ -3, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 232,
+			"Type": "232",
+			"Position": [ -3, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 233,
+			"Type": "233",
+			"Position": [ -3, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 234,
+			"Type": "234",
+			"Position": [ -3, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 235,
+			"Type": "235",
+			"Position": [ -3, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 236,
+			"Type": "236",
+			"Position": [ -3, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 237,
+			"Type": "237",
+			"Position": [ -3, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 238,
+			"Type": "238",
+			"Position": [ -3, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 239,
+			"Type": "239",
+			"Position": [ -3, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 240,
+			"Type": "240",
+			"Position": [ -3, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 241,
+			"Type": "241",
+			"Position": [ -3, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 242,
+			"Type": "242",
+			"Position": [ -3, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 243,
+			"Type": "243",
+			"Position": [ -3, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 244,
+			"Type": "244",
+			"Position": [ -3, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 245,
+			"Type": "245",
+			"Position": [ -3, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 246,
+			"Type": "246",
+			"Position": [ -3, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 247,
+			"Type": "247",
+			"Position": [ -3, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 248,
+			"Type": "248",
+			"Position": [ -3, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 249,
+			"Type": "249",
+			"Position": [ -3, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 250,
+			"Type": "250",
+			"Position": [ -3, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 251,
+			"Type": "251",
+			"Position": [ -2, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 252,
+			"Type": "252",
+			"Position": [ -2, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 253,
+			"Type": "253",
+			"Position": [ -2, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 254,
+			"Type": "254",
+			"Position": [ -2, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 255,
+			"Type": "255",
+			"Position": [ -2, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 256,
+			"Type": "256",
+			"Position": [ -2, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 257,
+			"Type": "257",
+			"Position": [ -2, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 258,
+			"Type": "258",
+			"Position": [ -2, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 259,
+			"Type": "259",
+			"Position": [ -2, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 260,
+			"Type": "260",
+			"Position": [ -2, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 261,
+			"Type": "261",
+			"Position": [ -2, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 262,
+			"Type": "262",
+			"Position": [ -2, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 263,
+			"Type": "263",
+			"Position": [ -2, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 264,
+			"Type": "264",
+			"Position": [ -2, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 265,
+			"Type": "265",
+			"Position": [ -2, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 266,
+			"Type": "266",
+			"Position": [ -2, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 267,
+			"Type": "267",
+			"Position": [ -2, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 268,
+			"Type": "268",
+			"Position": [ -2, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 269,
+			"Type": "269",
+			"Position": [ -2, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 270,
+			"Type": "270",
+			"Position": [ -2, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 271,
+			"Type": "271",
+			"Position": [ -2, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 272,
+			"Type": "272",
+			"Position": [ -2, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 273,
+			"Type": "273",
+			"Position": [ -2, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 274,
+			"Type": "274",
+			"Position": [ -2, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 275,
+			"Type": "275",
+			"Position": [ -2, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 276,
+			"Type": "276",
+			"Position": [ -1, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 277,
+			"Type": "277",
+			"Position": [ -1, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 278,
+			"Type": "278",
+			"Position": [ -1, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 279,
+			"Type": "279",
+			"Position": [ -1, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 280,
+			"Type": "280",
+			"Position": [ -1, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 281,
+			"Type": "281",
+			"Position": [ -1, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 282,
+			"Type": "282",
+			"Position": [ -1, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 283,
+			"Type": "283",
+			"Position": [ -1, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 284,
+			"Type": "284",
+			"Position": [ -1, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 285,
+			"Type": "285",
+			"Position": [ -1, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 286,
+			"Type": "286",
+			"Position": [ -1, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 287,
+			"Type": "287",
+			"Position": [ -1, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 288,
+			"Type": "288",
+			"Position": [ -1, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 289,
+			"Type": "289",
+			"Position": [ -1, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 290,
+			"Type": "290",
+			"Position": [ -1, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 291,
+			"Type": "291",
+			"Position": [ -1, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 292,
+			"Type": "292",
+			"Position": [ -1, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 293,
+			"Type": "293",
+			"Position": [ -1, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 294,
+			"Type": "294",
+			"Position": [ -1, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 295,
+			"Type": "295",
+			"Position": [ -1, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 296,
+			"Type": "296",
+			"Position": [ -1, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 297,
+			"Type": "297",
+			"Position": [ -1, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 298,
+			"Type": "298",
+			"Position": [ -1, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 299,
+			"Type": "299",
+			"Position": [ -1, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 300,
+			"Type": "300",
+			"Position": [ -1, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 301,
+			"Type": "301",
+			"Position": [ 0, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 302,
+			"Type": "302",
+			"Position": [ 0, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 303,
+			"Type": "303",
+			"Position": [ 0, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 304,
+			"Type": "304",
+			"Position": [ 0, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 305,
+			"Type": "305",
+			"Position": [ 0, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 306,
+			"Type": "306",
+			"Position": [ 0, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 307,
+			"Type": "307",
+			"Position": [ 0, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 308,
+			"Type": "308",
+			"Position": [ 0, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 309,
+			"Type": "309",
+			"Position": [ 0, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 310,
+			"Type": "310",
+			"Position": [ 0, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 311,
+			"Type": "311",
+			"Position": [ 0, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 312,
+			"Type": "312",
+			"Position": [ 0, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 313,
+			"Type": "313",
+			"Position": [ 0, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 314,
+			"Type": "314",
+			"Position": [ 0, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 315,
+			"Type": "315",
+			"Position": [ 0, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 316,
+			"Type": "316",
+			"Position": [ 0, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 317,
+			"Type": "317",
+			"Position": [ 0, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 318,
+			"Type": "318",
+			"Position": [ 0, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 319,
+			"Type": "319",
+			"Position": [ 0, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 320,
+			"Type": "320",
+			"Position": [ 0, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 321,
+			"Type": "321",
+			"Position": [ 0, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 322,
+			"Type": "322",
+			"Position": [ 0, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 323,
+			"Type": "323",
+			"Position": [ 0, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 324,
+			"Type": "324",
+			"Position": [ 0, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 325,
+			"Type": "325",
+			"Position": [ 0, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 326,
+			"Type": "326",
+			"Position": [ 1, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 327,
+			"Type": "327",
+			"Position": [ 1, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 328,
+			"Type": "328",
+			"Position": [ 1, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 329,
+			"Type": "329",
+			"Position": [ 1, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 330,
+			"Type": "330",
+			"Position": [ 1, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 331,
+			"Type": "331",
+			"Position": [ 1, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 332,
+			"Type": "332",
+			"Position": [ 1, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 333,
+			"Type": "333",
+			"Position": [ 1, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 334,
+			"Type": "334",
+			"Position": [ 1, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 335,
+			"Type": "335",
+			"Position": [ 1, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 336,
+			"Type": "336",
+			"Position": [ 1, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 337,
+			"Type": "337",
+			"Position": [ 1, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 338,
+			"Type": "338",
+			"Position": [ 1, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 339,
+			"Type": "339",
+			"Position": [ 1, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 340,
+			"Type": "340",
+			"Position": [ 1, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 341,
+			"Type": "341",
+			"Position": [ 1, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 342,
+			"Type": "342",
+			"Position": [ 1, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 343,
+			"Type": "343",
+			"Position": [ 1, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 344,
+			"Type": "344",
+			"Position": [ 1, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 345,
+			"Type": "345",
+			"Position": [ 1, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 346,
+			"Type": "346",
+			"Position": [ 1, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 347,
+			"Type": "347",
+			"Position": [ 1, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 348,
+			"Type": "348",
+			"Position": [ 1, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 349,
+			"Type": "349",
+			"Position": [ 1, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 350,
+			"Type": "350",
+			"Position": [ 1, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 351,
+			"Type": "351",
+			"Position": [ 2, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 352,
+			"Type": "352",
+			"Position": [ 2, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 353,
+			"Type": "353",
+			"Position": [ 2, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 354,
+			"Type": "354",
+			"Position": [ 2, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 355,
+			"Type": "355",
+			"Position": [ 2, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 356,
+			"Type": "356",
+			"Position": [ 2, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 357,
+			"Type": "357",
+			"Position": [ 2, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 358,
+			"Type": "358",
+			"Position": [ 2, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 359,
+			"Type": "359",
+			"Position": [ 2, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 360,
+			"Type": "360",
+			"Position": [ 2, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 361,
+			"Type": "361",
+			"Position": [ 2, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 362,
+			"Type": "362",
+			"Position": [ 2, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 363,
+			"Type": "363",
+			"Position": [ 2, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 364,
+			"Type": "364",
+			"Position": [ 2, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 365,
+			"Type": "365",
+			"Position": [ 2, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 366,
+			"Type": "366",
+			"Position": [ 2, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 367,
+			"Type": "367",
+			"Position": [ 2, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 368,
+			"Type": "368",
+			"Position": [ 2, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 369,
+			"Type": "369",
+			"Position": [ 2, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 370,
+			"Type": "370",
+			"Position": [ 2, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 371,
+			"Type": "371",
+			"Position": [ 2, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 372,
+			"Type": "372",
+			"Position": [ 2, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 373,
+			"Type": "373",
+			"Position": [ 2, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 374,
+			"Type": "374",
+			"Position": [ 2, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 375,
+			"Type": "375",
+			"Position": [ 2, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 376,
+			"Type": "376",
+			"Position": [ 3, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 377,
+			"Type": "377",
+			"Position": [ 3, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 378,
+			"Type": "378",
+			"Position": [ 3, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 379,
+			"Type": "379",
+			"Position": [ 3, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 380,
+			"Type": "380",
+			"Position": [ 3, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 381,
+			"Type": "381",
+			"Position": [ 3, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 382,
+			"Type": "382",
+			"Position": [ 3, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 383,
+			"Type": "383",
+			"Position": [ 3, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 384,
+			"Type": "384",
+			"Position": [ 3, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 385,
+			"Type": "385",
+			"Position": [ 3, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 386,
+			"Type": "386",
+			"Position": [ 3, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 387,
+			"Type": "387",
+			"Position": [ 3, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 388,
+			"Type": "388",
+			"Position": [ 3, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 389,
+			"Type": "389",
+			"Position": [ 3, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 390,
+			"Type": "390",
+			"Position": [ 3, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 391,
+			"Type": "391",
+			"Position": [ 3, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 392,
+			"Type": "392",
+			"Position": [ 3, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 393,
+			"Type": "393",
+			"Position": [ 3, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 394,
+			"Type": "394",
+			"Position": [ 3, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 395,
+			"Type": "395",
+			"Position": [ 3, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 396,
+			"Type": "396",
+			"Position": [ 3, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 397,
+			"Type": "397",
+			"Position": [ 3, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 398,
+			"Type": "398",
+			"Position": [ 3, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 399,
+			"Type": "399",
+			"Position": [ 3, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 400,
+			"Type": "400",
+			"Position": [ 3, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 401,
+			"Type": "401",
+			"Position": [ 4, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 402,
+			"Type": "402",
+			"Position": [ 4, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 403,
+			"Type": "403",
+			"Position": [ 4, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 404,
+			"Type": "404",
+			"Position": [ 4, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 405,
+			"Type": "405",
+			"Position": [ 4, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 406,
+			"Type": "406",
+			"Position": [ 4, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 407,
+			"Type": "407",
+			"Position": [ 4, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 408,
+			"Type": "408",
+			"Position": [ 4, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 409,
+			"Type": "409",
+			"Position": [ 4, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 410,
+			"Type": "410",
+			"Position": [ 4, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 411,
+			"Type": "411",
+			"Position": [ 4, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 412,
+			"Type": "412",
+			"Position": [ 4, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 413,
+			"Type": "413",
+			"Position": [ 4, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 414,
+			"Type": "414",
+			"Position": [ 4, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 415,
+			"Type": "415",
+			"Position": [ 4, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 416,
+			"Type": "416",
+			"Position": [ 4, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 417,
+			"Type": "417",
+			"Position": [ 4, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 418,
+			"Type": "418",
+			"Position": [ 4, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 419,
+			"Type": "419",
+			"Position": [ 4, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 420,
+			"Type": "420",
+			"Position": [ 4, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 421,
+			"Type": "421",
+			"Position": [ 4, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 422,
+			"Type": "422",
+			"Position": [ 4, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 423,
+			"Type": "423",
+			"Position": [ 4, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 424,
+			"Type": "424",
+			"Position": [ 4, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 425,
+			"Type": "425",
+			"Position": [ 4, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 426,
+			"Type": "426",
+			"Position": [ 5, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 427,
+			"Type": "427",
+			"Position": [ 5, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 428,
+			"Type": "428",
+			"Position": [ 5, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 429,
+			"Type": "429",
+			"Position": [ 5, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 430,
+			"Type": "430",
+			"Position": [ 5, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 431,
+			"Type": "431",
+			"Position": [ 5, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 432,
+			"Type": "432",
+			"Position": [ 5, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 433,
+			"Type": "433",
+			"Position": [ 5, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 434,
+			"Type": "434",
+			"Position": [ 5, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 435,
+			"Type": "435",
+			"Position": [ 5, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 436,
+			"Type": "436",
+			"Position": [ 5, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 437,
+			"Type": "437",
+			"Position": [ 5, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 438,
+			"Type": "438",
+			"Position": [ 5, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 439,
+			"Type": "439",
+			"Position": [ 5, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 440,
+			"Type": "440",
+			"Position": [ 5, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 441,
+			"Type": "441",
+			"Position": [ 5, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 442,
+			"Type": "442",
+			"Position": [ 5, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 443,
+			"Type": "443",
+			"Position": [ 5, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 444,
+			"Type": "444",
+			"Position": [ 5, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 445,
+			"Type": "445",
+			"Position": [ 5, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 446,
+			"Type": "446",
+			"Position": [ 5, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 447,
+			"Type": "447",
+			"Position": [ 5, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 448,
+			"Type": "448",
+			"Position": [ 5, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 449,
+			"Type": "449",
+			"Position": [ 5, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 450,
+			"Type": "450",
+			"Position": [ 5, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 451,
+			"Type": "451",
+			"Position": [ 6, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 452,
+			"Type": "452",
+			"Position": [ 6, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 453,
+			"Type": "453",
+			"Position": [ 6, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 454,
+			"Type": "454",
+			"Position": [ 6, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 455,
+			"Type": "455",
+			"Position": [ 6, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 456,
+			"Type": "456",
+			"Position": [ 6, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 457,
+			"Type": "457",
+			"Position": [ 6, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 458,
+			"Type": "458",
+			"Position": [ 6, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 459,
+			"Type": "459",
+			"Position": [ 6, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 460,
+			"Type": "460",
+			"Position": [ 6, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 461,
+			"Type": "461",
+			"Position": [ 6, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 462,
+			"Type": "462",
+			"Position": [ 6, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 463,
+			"Type": "463",
+			"Position": [ 6, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 464,
+			"Type": "464",
+			"Position": [ 6, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 465,
+			"Type": "465",
+			"Position": [ 6, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 466,
+			"Type": "466",
+			"Position": [ 6, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 467,
+			"Type": "467",
+			"Position": [ 6, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 468,
+			"Type": "468",
+			"Position": [ 6, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 469,
+			"Type": "469",
+			"Position": [ 6, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 470,
+			"Type": "470",
+			"Position": [ 6, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 471,
+			"Type": "471",
+			"Position": [ 6, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 472,
+			"Type": "472",
+			"Position": [ 6, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 473,
+			"Type": "473",
+			"Position": [ 6, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 474,
+			"Type": "474",
+			"Position": [ 6, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 475,
+			"Type": "475",
+			"Position": [ 6, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 476,
+			"Type": "476",
+			"Position": [ 7, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 477,
+			"Type": "477",
+			"Position": [ 7, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 478,
+			"Type": "478",
+			"Position": [ 7, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 479,
+			"Type": "479",
+			"Position": [ 7, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 480,
+			"Type": "480",
+			"Position": [ 7, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 481,
+			"Type": "481",
+			"Position": [ 7, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 482,
+			"Type": "482",
+			"Position": [ 7, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 483,
+			"Type": "483",
+			"Position": [ 7, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 484,
+			"Type": "484",
+			"Position": [ 7, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 485,
+			"Type": "485",
+			"Position": [ 7, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 486,
+			"Type": "486",
+			"Position": [ 7, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 487,
+			"Type": "487",
+			"Position": [ 7, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 488,
+			"Type": "488",
+			"Position": [ 7, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 489,
+			"Type": "489",
+			"Position": [ 7, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 490,
+			"Type": "490",
+			"Position": [ 7, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 491,
+			"Type": "491",
+			"Position": [ 7, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 492,
+			"Type": "492",
+			"Position": [ 7, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 493,
+			"Type": "493",
+			"Position": [ 7, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 494,
+			"Type": "494",
+			"Position": [ 7, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 495,
+			"Type": "495",
+			"Position": [ 7, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 496,
+			"Type": "496",
+			"Position": [ 7, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 497,
+			"Type": "497",
+			"Position": [ 7, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 498,
+			"Type": "498",
+			"Position": [ 7, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 499,
+			"Type": "499",
+			"Position": [ 7, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 500,
+			"Type": "500",
+			"Position": [ 7, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 501,
+			"Type": "501",
+			"Position": [ 8, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 502,
+			"Type": "502",
+			"Position": [ 8, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 503,
+			"Type": "503",
+			"Position": [ 8, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 504,
+			"Type": "504",
+			"Position": [ 8, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 505,
+			"Type": "505",
+			"Position": [ 8, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 506,
+			"Type": "506",
+			"Position": [ 8, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 507,
+			"Type": "507",
+			"Position": [ 8, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 508,
+			"Type": "508",
+			"Position": [ 8, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 509,
+			"Type": "509",
+			"Position": [ 8, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 510,
+			"Type": "510",
+			"Position": [ 8, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 511,
+			"Type": "511",
+			"Position": [ 8, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 512,
+			"Type": "512",
+			"Position": [ 8, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 513,
+			"Type": "513",
+			"Position": [ 8, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 514,
+			"Type": "514",
+			"Position": [ 8, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 515,
+			"Type": "515",
+			"Position": [ 8, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 516,
+			"Type": "516",
+			"Position": [ 8, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 517,
+			"Type": "517",
+			"Position": [ 8, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 518,
+			"Type": "518",
+			"Position": [ 8, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 519,
+			"Type": "519",
+			"Position": [ 8, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 520,
+			"Type": "520",
+			"Position": [ 8, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 521,
+			"Type": "521",
+			"Position": [ 8, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 522,
+			"Type": "522",
+			"Position": [ 8, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 523,
+			"Type": "523",
+			"Position": [ 8, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 524,
+			"Type": "524",
+			"Position": [ 8, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 525,
+			"Type": "525",
+			"Position": [ 8, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 526,
+			"Type": "526",
+			"Position": [ 9, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 527,
+			"Type": "527",
+			"Position": [ 9, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 528,
+			"Type": "528",
+			"Position": [ 9, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 529,
+			"Type": "529",
+			"Position": [ 9, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 530,
+			"Type": "530",
+			"Position": [ 9, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 531,
+			"Type": "531",
+			"Position": [ 9, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 532,
+			"Type": "532",
+			"Position": [ 9, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 533,
+			"Type": "533",
+			"Position": [ 9, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 534,
+			"Type": "534",
+			"Position": [ 9, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 535,
+			"Type": "535",
+			"Position": [ 9, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 536,
+			"Type": "536",
+			"Position": [ 9, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 537,
+			"Type": "537",
+			"Position": [ 9, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 538,
+			"Type": "538",
+			"Position": [ 9, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 539,
+			"Type": "539",
+			"Position": [ 9, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 540,
+			"Type": "540",
+			"Position": [ 9, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 541,
+			"Type": "541",
+			"Position": [ 9, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 542,
+			"Type": "542",
+			"Position": [ 9, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 543,
+			"Type": "543",
+			"Position": [ 9, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 544,
+			"Type": "544",
+			"Position": [ 9, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 545,
+			"Type": "545",
+			"Position": [ 9, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 546,
+			"Type": "546",
+			"Position": [ 9, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 547,
+			"Type": "547",
+			"Position": [ 9, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 548,
+			"Type": "548",
+			"Position": [ 9, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 549,
+			"Type": "549",
+			"Position": [ 9, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 550,
+			"Type": "550",
+			"Position": [ 9, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 551,
+			"Type": "551",
+			"Position": [ 10, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 552,
+			"Type": "552",
+			"Position": [ 10, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 553,
+			"Type": "553",
+			"Position": [ 10, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 554,
+			"Type": "554",
+			"Position": [ 10, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 555,
+			"Type": "555",
+			"Position": [ 10, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 556,
+			"Type": "556",
+			"Position": [ 10, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 557,
+			"Type": "557",
+			"Position": [ 10, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 558,
+			"Type": "558",
+			"Position": [ 10, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 559,
+			"Type": "559",
+			"Position": [ 10, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 560,
+			"Type": "560",
+			"Position": [ 10, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 561,
+			"Type": "561",
+			"Position": [ 10, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 562,
+			"Type": "562",
+			"Position": [ 10, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 563,
+			"Type": "563",
+			"Position": [ 10, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 564,
+			"Type": "564",
+			"Position": [ 10, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 565,
+			"Type": "565",
+			"Position": [ 10, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 566,
+			"Type": "566",
+			"Position": [ 10, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 567,
+			"Type": "567",
+			"Position": [ 10, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 568,
+			"Type": "568",
+			"Position": [ 10, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 569,
+			"Type": "569",
+			"Position": [ 10, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 570,
+			"Type": "570",
+			"Position": [ 10, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 571,
+			"Type": "571",
+			"Position": [ 10, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 572,
+			"Type": "572",
+			"Position": [ 10, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 573,
+			"Type": "573",
+			"Position": [ 10, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 574,
+			"Type": "574",
+			"Position": [ 10, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 575,
+			"Type": "575",
+			"Position": [ 10, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 576,
+			"Type": "576",
+			"Position": [ 11, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 577,
+			"Type": "577",
+			"Position": [ 11, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 578,
+			"Type": "578",
+			"Position": [ 11, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 579,
+			"Type": "579",
+			"Position": [ 11, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 580,
+			"Type": "580",
+			"Position": [ 11, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 581,
+			"Type": "581",
+			"Position": [ 11, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 582,
+			"Type": "582",
+			"Position": [ 11, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 583,
+			"Type": "583",
+			"Position": [ 11, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 584,
+			"Type": "584",
+			"Position": [ 11, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 585,
+			"Type": "585",
+			"Position": [ 11, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 586,
+			"Type": "586",
+			"Position": [ 11, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 587,
+			"Type": "587",
+			"Position": [ 11, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 588,
+			"Type": "588",
+			"Position": [ 11, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 589,
+			"Type": "589",
+			"Position": [ 11, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 590,
+			"Type": "590",
+			"Position": [ 11, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 591,
+			"Type": "591",
+			"Position": [ 11, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 592,
+			"Type": "592",
+			"Position": [ 11, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 593,
+			"Type": "593",
+			"Position": [ 11, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 594,
+			"Type": "594",
+			"Position": [ 11, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 595,
+			"Type": "595",
+			"Position": [ 11, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 596,
+			"Type": "596",
+			"Position": [ 11, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 597,
+			"Type": "597",
+			"Position": [ 11, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 598,
+			"Type": "598",
+			"Position": [ 11, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 599,
+			"Type": "599",
+			"Position": [ 11, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 600,
+			"Type": "600",
+			"Position": [ 11, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 601,
+			"Type": "601",
+			"Position": [ 12, -12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 602,
+			"Type": "602",
+			"Position": [ 12, -11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 603,
+			"Type": "603",
+			"Position": [ 12, -10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 604,
+			"Type": "604",
+			"Position": [ 12, -9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 605,
+			"Type": "605",
+			"Position": [ 12, -8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 606,
+			"Type": "606",
+			"Position": [ 12, -7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 607,
+			"Type": "607",
+			"Position": [ 12, -6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 608,
+			"Type": "608",
+			"Position": [ 12, -5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 609,
+			"Type": "609",
+			"Position": [ 12, -4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 610,
+			"Type": "610",
+			"Position": [ 12, -3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 611,
+			"Type": "611",
+			"Position": [ 12, -2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 612,
+			"Type": "612",
+			"Position": [ 12, -1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 613,
+			"Type": "613",
+			"Position": [ 12, 0, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 614,
+			"Type": "614",
+			"Position": [ 12, 1, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 615,
+			"Type": "615",
+			"Position": [ 12, 2, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 616,
+			"Type": "616",
+			"Position": [ 12, 3, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 617,
+			"Type": "617",
+			"Position": [ 12, 4, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 618,
+			"Type": "618",
+			"Position": [ 12, 5, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 619,
+			"Type": "619",
+			"Position": [ 12, 6, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 620,
+			"Type": "620",
+			"Position": [ 12, 7, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 621,
+			"Type": "621",
+			"Position": [ 12, 8, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 622,
+			"Type": "622",
+			"Position": [ 12, 9, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 623,
+			"Type": "623",
+			"Position": [ 12, 10, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 624,
+			"Type": "624",
+			"Position": [ 12, 11, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		},
+		{
+			"ID": 625,
+			"Type": "625",
+			"Position": [ 12, 12, 0 ],
+			"Rotation": [ 0, 0, 0 ],
+			"TextureName": "co_floor_wood_a01.co_floor_wood_a01"
+		}
+	]
+}
