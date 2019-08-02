@@ -26,6 +26,8 @@ ACSNormalMonsterCharacter::ACSNormalMonsterCharacter()
 		GetCharacterMovement()->bOrientRotationToMovement = true;
 		GetCharacterMovement()->RotationRate = FRotator(0.0f, 480.0f, 0.0f);*/
 	this->Tags.AddUnique(TEXT("NormalMonster"));
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("CSMonster"));
+	GetMesh()->SetCollisionProfileName(TEXT("NoCollision"));
 	//GetCapsuleComponent()->ComponentTags.AddUnique(TEXT("NormalMonster"));
 	AIControllerClass = ACS_AIController::StaticClass();
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
@@ -68,7 +70,7 @@ void ACSNormalMonsterCharacter::AttackCheck()
 	//사이즈를 정해 놓았음 애들 크기에 맞게 충돌 체크 위치 조절
 	bool bResult = GetWorld()->SweepSingleByChannel(HitResult, GetActorLocation()+FVector(0.0f,0.0f,20.0f), GetActorLocation() + FVector(0.0f, 0.0f, 20.0f) 
 		+GetActorForwardVector()*120.0f,
-		FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel12, FCollisionShape::MakeSphere(30.0f), Parms);
+		FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel3, FCollisionShape::MakeSphere(30.0f), Parms);
 
 	FVector TracVec = FVector(0.0f, 0.0f, 20.0f)+GetActorForwardVector()*120.0f;
 	FVector Center = GetActorLocation() + TracVec;

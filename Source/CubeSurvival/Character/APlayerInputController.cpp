@@ -26,7 +26,6 @@ AAPlayerInputController::AAPlayerInputController()
 	SpringArm->TargetArmLength = CameraZoom;
 	SpringArm->SetRelativeRotation(FRotator(-30.0f, 0.0f, 0.0f));
 	SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, 80.0f));
-	//PlayerCharacter->GetMonsterMesh()[TEXT("02020002_m_redmushroom")];
 
 	if (PlayerCharacter != NULL)
 	{
@@ -34,17 +33,19 @@ AAPlayerInputController::AAPlayerInputController()
 		GetMesh()->SetRelativeLocationAndRotation(FVector4(0.0f, 0.0f, -88.0f), FRotator(0.0f, 270.0f, 0.0f));
 		GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 		GetMesh()->SetAnimInstanceClass(PlayerCharacter->GetPlayerAnimClass());
+		GetMesh()->SetCollisionProfileName(TEXT("NoCollision"));
 	}
-	//test = PlayerCharacter->Weapon;
-	//this->Tags.AddUnique(TEXT("Player"));
+
 	GetCapsuleComponent()->ComponentTags.AddUnique(TEXT("Player"));
-	GetCharacterMovement()->JumpZVelocity = 600.0f;
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("CSCharacter"));
+	
+	GetCharacterMovement()->JumpZVelocity = 600.0f;
 	CharacterSpeed = 600.0f;
 	CharacterDashSpeed = 1.0f;
-	IsAttacking = false;
-
 	MaxCombo = 4;
+
+	IsAttacking = false;
+	invincibility = false;
 	AttackEndComboState();
 }
 
@@ -88,6 +89,7 @@ void AAPlayerInputController::PostInitializeComponents()
 
 	//AddUObject UObject 기반 멤버 함수 델리게이트를 추가합니다. UObject 델리게이트는 자신의 오브젝트에 대한 약 레퍼런스를 유지합니다.
 	PlayerAnim->OnAttackHitCheck.AddUObject(this, &AAPlayerInputController::AttackCheck);
+	GetCapsuleComponent()->OnComponentHit.AddDynamic(this, &AAPlayerInputController::PlayerHit);;
 }
 
 // Called every frame
@@ -127,6 +129,7 @@ void AAPlayerInputController::UpDown(float NewAxisValue)
 		return;
 	}
 	AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
+	
 }
 
 void AAPlayerInputController::LeftRight(float NewAxisValue)
@@ -200,12 +203,10 @@ void AAPlayerInputController::Dash()
 	if (PlayerAnim->GetDash() == true || IsAttacking == true || PlayerAnim->GetCurrentPawnSpeed() == 0.0f || PlayerAnim->GetIsInAir() == true|| PlayerAnim->GetDamage()==true)
 		return;
 
-
 	PlayerAnim->SetJumpFinish(false);
 	PlayerAnim->SetDash(true);
 	PlayerAnim->DashSpeed = 2.0f;
 	PlayerAnim->PlayDashMontage();
-
 }
 
 
@@ -224,11 +225,8 @@ void AAPlayerInputController::Attatck()
 	else
 	{
 		CSCHECK(CurrentCombo == 0);
-
-
 		AttackStartComboState();
 		PlayerAnim->PlayeAttackMontage();
-		//UE_LOG(LogTemp, Log, TEXT("PlayeAttackMontage"));
 		PlayerAnim->JumpToAttackMontageSection(CurrentCombo);
 		IsAttacking = true;
 	}
@@ -240,18 +238,12 @@ void AAPlayerInputController::AttackCheck()
 	FHitResult HitResult;
 	FCollisionQueryParams Parms(NAME_None, false, this);
 	bool bResult = GetWorld()->SweepSingleByChannel(HitResult, GetActorLocation(), GetActorLocation() + GetActorForwardVector()*200.0f,
-		FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel12, FCollisionShape::MakeSphere(50.0f), Parms);
+		FQuat::Identity, ECollisionChannel::ECC_GameTraceChannel3, FCollisionShape::MakeSphere(50.0f), Parms);
 
 
 
 
 #if ENABLE_DRAW_DEBUG
-
-	//FVector TracVec = GetActorForwardVector()*200.0f;
-	//FVector Center = GetActorLocation() + TracVec * 0.5f;
-	//FColor DrawColor = bResult ? FColor::Green : FColor::Red;
-	//float LiftTime = 5.0f;
-	//DrawDebugSphere(GetWorld(), Center, 50.0f, 32.0f, DrawColor, false, LiftTime);
 
 	FVector TraceVec = GetActorForwardVector()* 200.0f;
 	FVector Center = GetActorLocation() + TraceVec * 0.5f;
@@ -263,7 +255,7 @@ void AAPlayerInputController::AttackCheck()
 
 #endif
 	if (bResult)
-	{//if (Target->GrassTrigger->ComponentHasTag(FName(TEXT("Grass"))))
+	{
 		if (HitResult.Actor.IsValid())
 		{
 			if (HitResult.GetActor()->ActorHasTag(FName(TEXT("NormalMonster"))))
@@ -284,11 +276,7 @@ void AAPlayerInputController::AttackCheck()
 				MonsterAnim->SetIsAttackDelayed(true);
 				MonsterAnim->SetIsDamaged(true);
 				MonsterAnim->SetIsAttacking(false);
-				//GetWorld()->GetTimerManager().SetTimer(MonsterAnim->DelayTimer, this,);
-
 			}
-			//if()
-			//if(Hit)
 		}
 	}
 }
@@ -296,12 +284,10 @@ void AAPlayerInputController::AttackCheck()
 void AAPlayerInputController::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
 {
 	if (!IsAttacking || CurrentCombo < 0) return;
-	//if(IsAttacking==false||)
+
 	if (PlayerAnim->GetDash() == true)
 		return;
 
-	//CSCHECK(IsAttacking);
-	//CSCHECK(CurrentCombo > 0);
 	IsAttacking = false;
 	AttackEndComboState();
 }
@@ -347,19 +333,54 @@ void AAPlayerInputController::SetControlMode(int32 controlMode)
 
 void AAPlayerInputController::KnockBack(FVector HitLocation)
 {
-	FVector KnockBackDirection = GetActorLocation() - HitLocation;
+	PlayerAnim->SetJumpFinish(false);
 
-	//KnockBackDirection.GetSafeNormal();
-	//무적 타임 만들기
+	if (invincibility == true)//무적일 경우
+	{
+		PlayerAnim->SetDamage(false);
+		return;
+	}
+
+	invincibility = true;
+
+	FVector KnockBackDirection = GetActorLocation() - HitLocation;
+	KnockBackDirection.Z = 0;
+
 	PlayerAnim->SetDamage(true);
 	KnockBackDirection.Normalize();
-	KnockBackDirection.Z = 0;
-	LaunchCharacter(KnockBackDirection*1500.0f, false, true);
-	//FVector out = KnockBackDirection;
-	//KnockBackDirection = KnockBackDirection.Normalize;
-	//SetActorLocation(FMath::VInterpTo(GetActorLocation(), GetActorLocation()*(KnockBackDirection*5.0f), GetWorld()->GetDeltaSeconds(), 5.0f));
 
-	//GetCharacterMovement()->AddImpulse(KnockBackDirection*10.0f, true);
+	if (PlayerAnim->GetIsInAir())//공중에 있을 때
+	{
+		GetCharacterMovement()->Launch(KnockBackDirection*700.0f);
+	}
+	else
+	{
+		GetCharacterMovement()->Launch(KnockBackDirection*1500.0f);
+	}
 
+	GetWorldTimerManager().SetTimer(Timer, this, &AAPlayerInputController::ChangeInvincibility, 3.0f, false);//무적 카운트 들어감
 }
+
+void AAPlayerInputController::PlayerHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (OtherActor->ActorHasTag("NormalMonster"))
+	{
+		KnockBack(OtherActor->GetActorLocation());
+	}
+}
+
+void AAPlayerInputController::ChangeInvincibility()
+{
+	//UE_LOG(LogTemp, Log, TEXT("ChangeInvincibility"));
+	invincibility = false;
+}
+//
+//void AAPlayerInputController::OnCharacterOverlap(UPrimitiveComponent* OverlappedCom, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+//{
+//	if (OtherActor->ActorHasTag("NormalMonster"))
+//	{
+//		KnockBack(OtherActor->GetActorLocation());
+//		//CharacterMovements->speed
+//	}
+//}
 
