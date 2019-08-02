@@ -4,6 +4,8 @@
 
 #include "EngineMinimal.h"
 
+#define CUBE_SIZE 150
+
 DECLARE_LOG_CATEGORY_EXTERN(CubeSurvival, Log, All);
 #define CSLOG_CALLINFO (FString(__FUNCTION__) + TEXT("(") + FString::FromInt(__LINE__) + TEXT(")"))
 #define CSLOG_S(Verbosity) UE_LOG(CubeSurvival, Verbosity, TEXT("%s"), *CSLOG_CALLINFO)

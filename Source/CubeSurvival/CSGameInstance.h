@@ -4,7 +4,6 @@
 
 #include "CubeSurvival.h"
 #include "Engine/GameInstance.h"
-#include "MapManager.h"
 #include "CSGameInstance.generated.h"
 /**
  * 
@@ -15,14 +14,6 @@ class CUBESURVIVAL_API UCSGameInstance : public UGameInstance
 	GENERATED_BODY()
 public:	
 	virtual void OnStart() override;
-
-	UFUNCTION()
-	void TestFunction();
-
-	UPROPERTY()
-	FString TestName;
 	
-	//UPROPERTY()
-	//TSharedPtr<UMapManager> mm;
-	TSharedFromThis<this>
+
 };

@@ -5,8 +5,7 @@
 #include "CubeSurvival.h"
 #include "UObject/NoExportTypes.h"
 #include "JsonParsorObject.h"
-#include "CSGameStateBase.h"
-#include "CSGameInstance.h"
+#include "CubeActor.h"
 #include "List.h"
 
 #include "MapManager.generated.h"
@@ -16,12 +15,7 @@ struct FMapInfo
 {
 	GENERATED_BODY()
 
-	public:
-	UPROPERTY()
-	FVector Position;
-
-	UPROPERTY()
-	FString Type;
+public:
 
 	~FMapInfo()
 	{
@@ -33,16 +27,28 @@ UCLASS()
 class CUBESURVIVAL_API UMapManager : public UObject
 {
 	GENERATED_BODY()
-	
-public:
+private:
 	UMapManager();
 	~UMapManager();
+	
+	void MakeBasicMap();
+
+public:
 
 	void AddMap(FMapInfo MapInfo);
-	//void a(int32 a = 0);
-	
-private:
-	TArray<FMapInfo> Maps;
-	FMapInfo TestSP;
+	void WriteJsonMapData();
+	void ReadJsonMapData();
+	void SpawnMapDataToCube();
 
+	void SetWorld(UWorld* World);
+
+private:
+	UPROPERTY()
+	TArray<FMapData> TotalMapData;
+
+	UPROPERTY()
+	TArray<TWeakObjectPtr<ACubeActor>> TotalCube;
+
+	UPROPERTY()
+	UWorld* World;
 };

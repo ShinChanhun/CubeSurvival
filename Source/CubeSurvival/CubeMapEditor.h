@@ -3,18 +3,15 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Engine/UserDefinedStruct.h"
-#include "MapDataStruct.generated.h"
+#include "UObject/NoExportTypes.h"
+#include "CubeMapEditor.generated.h"
 
 /**
  * 
  */
-UCLASS()
-class CUBESURVIVAL_API UMapDataStruct : public UUserDefinedStruct
+class CUBESURVIVAL_API UCubeMapEditor : public UObject
 {
 	GENERATED_BODY()
-	
-	
 	
 	
 };
