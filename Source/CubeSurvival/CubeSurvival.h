@@ -4,6 +4,8 @@
 
 #include "EngineMinimal.h"
 
+#define CUBE_SIZE 150
+
 UENUM(BlueprintType)
 enum class ECharacterState :uint8
 {

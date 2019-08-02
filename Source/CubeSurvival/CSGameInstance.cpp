@@ -6,8 +6,5 @@
 
 void UCSGameInstance::OnStart()
 {
-	UJsonParsorObject * jpo = (UJsonParsorObject*)GetTransientPackage();
-
-	jpo->Write("aa");
-
-}
+	
+} 
