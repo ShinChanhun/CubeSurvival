@@ -2,7 +2,6 @@
 
 #include "BTTask_FindPatrol.h"
 #include "CSNormalMonsterCharacter.h"
-//#include "ANormalMonster.h"
 #include "CS_AIController.h"
 #include"BehaviorTree/BlackboardComponent.h"
 

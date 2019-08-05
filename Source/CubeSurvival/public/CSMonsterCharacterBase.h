@@ -27,8 +27,12 @@ public:
 	// Sets default values for this pawn's properties
 	ACSMonsterCharacterBase();
 	void MonsterSetting(class ACSMonsterCharacterBase* SetCharacter, FString MonsterName);//일반적인 NormalMonster 셋팅
+
+	UFUNCTION()
 	virtual void MonsterCapsuleSize(class ACSMonsterCharacterBase* SetCharacter, float Size);
 
+
+	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot);
 
 protected:
 	// Called when the game starts or when spawned

@@ -36,6 +36,9 @@ public:
 		class UUNomalMonsterAnimInstance* MonsterAnim;*/
 
 	void AttackCheck();
+
+
+	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot) override;
 public:
 
 private:

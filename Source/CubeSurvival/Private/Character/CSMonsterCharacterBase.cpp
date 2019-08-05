@@ -81,3 +81,8 @@ void ACSMonsterCharacterBase::MonsterCapsuleSize(class ACSMonsterCharacterBase* 
 	SetCharacter->GetCapsuleComponent()->SetCapsuleRadius(Size);
 	SetCharacter->GetCapsuleComponent()->SetCapsuleHalfHeight(Size);
 }
+
+void ACSMonsterCharacterBase::MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot)
+{
+	//UE_LOG(LogTemp, Warning, TEXT("2222222"));
+}

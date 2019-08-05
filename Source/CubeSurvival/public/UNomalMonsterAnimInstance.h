@@ -22,11 +22,11 @@ class CUBESURVIVAL_API UUNomalMonsterAnimInstance : public UAnimInstance
 
 public:
 	inline void SetIsAttacking(bool IsAttack) { IsAttacking = IsAttack;}
-	inline bool GetIsAttacking() { return IsAttacking; }
+	inline bool GetIsAttacking() const { return IsAttacking; }
 	inline void SetIsDamaged(bool isdamage) { IsDamaged = isdamage; }
-	inline bool GetIsDamaged() { return IsDamaged; }
+	inline bool GetIsDamaged() const { return IsDamaged; }
 	inline void SetIsAttackDelayed(bool isDelay) { AttackDelayed = isDelay; }
-	inline bool GetIsAttackDelayed() { return AttackDelayed ; }
+	inline bool GetIsAttackDelayed() const { return AttackDelayed ; }
 private:
 	UFUNCTION()
 	void AnimNotify_NomalMonsterAttack();
