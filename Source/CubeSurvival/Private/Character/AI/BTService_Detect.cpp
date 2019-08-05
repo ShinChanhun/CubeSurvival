@@ -43,7 +43,8 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 
 			if (Player&&Player->GetController()->IsPlayerController())
 			{
-				OwnerComp.GetBlackboardComponent()->SetValueAsObject(ACS_AIController::TargetKey, Player);				
+				OwnerComp.GetBlackboardComponent()->SetValueAsObject(ACS_AIController::TargetKey, Player);
+				
 				DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Green, false, 0.2f);
 				return;
 			}
@@ -52,7 +53,7 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	else
 	{
 		OwnerComp.GetBlackboardComponent()->SetValueAsObject(ACS_AIController::TargetKey, nullptr);
-	
+		//UE_LOG(LogTemp, Log, TEXT("PlayeAttackMontage"));
 	}
 
 	DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Red, false, 0.2f);
