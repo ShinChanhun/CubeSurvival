@@ -5,6 +5,7 @@
 #include "CubeSurvival.h"
 #include "GameFramework/GameState.h"
 #include "MapManager.h"
+#include "DungeonManagerObject.h"
 #include "CSGameState.generated.h"
 
 /**
@@ -20,6 +21,7 @@ class CUBESURVIVAL_API ACSGameState : public AGameState
 	void BeginPlay() override;
 
 public:
-	UPROPERTY(EditAnywhere)
 	TWeakObjectPtr<UMapManager> MapManager;
+
+	TWeakObjectPtr<UDungeonManagerObject> DungeonManager;
 };

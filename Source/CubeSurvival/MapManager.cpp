@@ -5,6 +5,7 @@
 UMapManager::UMapManager()
 {
 	ReadJsonMapData();
+	IsSeletedMap = false;
 }
 
 
@@ -79,7 +80,7 @@ void UMapManager::WriteJsonMapData()
 	jo->WriteMapData(TotalMapData, "BasicMap");
 }
 
-void UMapManager::AddMap(FMapInfo MapInfo)
+void UMapManager::AddMap(FMapData MapData)
 {
 	//Maps.Add(MapInfo);
 

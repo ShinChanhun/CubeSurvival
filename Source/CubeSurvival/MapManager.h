@@ -6,18 +6,21 @@
 #include "UObject/NoExportTypes.h"
 #include "JsonParsorObject.h"
 #include "CubeActor.h"
-#include "List.h"
 
 #include "MapManager.generated.h"
 
 USTRUCT()
-struct FMapInfo
+struct FSelectedMap
 {
 	GENERATED_BODY()
-
 public:
-
-	~FMapInfo()
+	UPROPERTY()
+	bool IsSelected;
+	
+	UPROPERTY()
+	FVector Position;
+	
+	~FSelectedMap()
 	{
 		UE_LOG(LogTemp, Log, TEXT("Log Message-----------------------------------------~FMapInfo"));
 	}
@@ -35,7 +38,7 @@ private:
 
 public:
 
-	void AddMap(FMapInfo MapInfo);
+	void AddMap(FMapData MapData);
 	void WriteJsonMapData();
 	void ReadJsonMapData();
 	void SpawnMapDataToCube();
@@ -51,4 +54,9 @@ private:
 
 	UPROPERTY()
 	UWorld* World;
+
+	UPROPERTY()
+	bool IsSeletedMap;
+
+
 };

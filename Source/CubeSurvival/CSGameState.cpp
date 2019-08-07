@@ -14,10 +14,12 @@ void ACSGameState::BeginPlay()
 
 	CSLOG_S(Warning);
 
-
 	MapManager = MakeWeakObjectPtr(NewObject<UMapManager>());
 	MapManager->SetWorld(GetWorld());
 	MapManager->SpawnMapDataToCube();
-	//MapManager = NewObject<UMapManager>();
+
+	DungeonManager = MakeWeakObjectPtr(NewObject<UDungeonManagerObject>());
+	DungeonManager->CreateDungeon();
+	auto a = DungeonManager->GetDungeonMap();
 
 }

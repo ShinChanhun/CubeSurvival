@@ -9,7 +9,7 @@
 #include "JsonParsorObject.generated.h"
 
 UENUM()
-enum class Direction : uint8
+enum class EDirection : uint8
 {
 	Direction_Top		UMETA(DisplayName = "Top"),
 	Direction_Bottom	UMETA(DisplayName = "Bottom"),

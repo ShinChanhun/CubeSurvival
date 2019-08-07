@@ -39,6 +39,9 @@ void UJsonParsorObject::WriteMapData(TArray<struct FMapData>& ArrMapData, FStrin
 	for (const FMapData& item : ArrMapData)
 	{
 		//TODO: 동적으로 작업 시간적 여유가 부족하기에 추후 작업
+#pragma region DynamicRegion
+
+
 		//for (TFieldIterator<UStructProperty> It(item.StaticStruct()); It; ++It)
 		//{
 		//	UProperty* Property = *It;
@@ -72,6 +75,7 @@ void UJsonParsorObject::WriteMapData(TArray<struct FMapData>& ArrMapData, FStrin
 		//	//jsonObj->WriteValue("Type", item.Type);
 
 		//}
+#pragma endregion
 
 		//정적으로 작업
 		//jsonObj->WriteIdentifierPrefix("MapDataStructs");
