@@ -18,6 +18,7 @@ class CUBESURVIVAL_API ACSGameState : public AGameState
 	ACSGameState();
 	
 	
+	UFUNCTION()
 	void BeginPlay() override;
 
 public:

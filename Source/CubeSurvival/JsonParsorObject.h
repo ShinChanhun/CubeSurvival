@@ -8,17 +8,6 @@
 #include "JsonObjectConverter.h"
 #include "JsonParsorObject.generated.h"
 
-UENUM()
-enum class EDirection : uint8
-{
-	Direction_Top		UMETA(DisplayName = "Top"),
-	Direction_Bottom	UMETA(DisplayName = "Bottom"),
-	Direction_Up		UMETA(DisplayName = "Up"),
-	Direction_Down		UMETA(DisplayName = "Down"),
-	Direction_Right		UMETA(DisplayName = "Right"),
-	Direction_Left		UMETA(DisplayName = "Left"),
-};
-
 USTRUCT()
 struct FMapData
 {

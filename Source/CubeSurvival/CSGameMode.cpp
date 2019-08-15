@@ -7,7 +7,7 @@ ACSGameMode::ACSGameMode()
 	GameStateClass = ACSGameState::StaticClass();
 }
 
-void ACSGameMode::BeginPlay()
-{
-	Super::BeginPlay();
-}
+//void ACSGameMode::BeginPlay()
+//{
+//	Super::BeginPlay();
+//}

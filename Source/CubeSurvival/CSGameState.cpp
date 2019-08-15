@@ -15,7 +15,7 @@ void ACSGameState::BeginPlay()
 	CSLOG_S(Warning);
 
 	MapManager = MakeWeakObjectPtr(NewObject<UMapManager>());
-	MapManager->SetWorld(GetWorld());
+	MapManager->SetWorld((UWorld*)GetWorld());
 	MapManager->SpawnMapDataToCube();
 
 	DungeonManager = MakeWeakObjectPtr(NewObject<UDungeonManagerObject>());

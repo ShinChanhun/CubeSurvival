@@ -19,11 +19,9 @@ private:
 
 public:
 
-	void BeginPlay() override;
+	//void BeginPlay() override;
 
-	
+	//
 	
 public:
-	UPROPERTY()
-	TWeakObjectPtr<ACSGameState> gs;
 };

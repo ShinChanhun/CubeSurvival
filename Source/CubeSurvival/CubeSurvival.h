@@ -15,6 +15,17 @@ enum class ECharacterState :uint8
 	DEAD
 };
 
+UENUM()
+enum class EDirection : uint8
+{
+	Top		UMETA(DisplayName = "Top"),
+	Bottom	UMETA(DisplayName = "Bottom"),
+	Up		UMETA(DisplayName = "Up"),
+	Down	UMETA(DisplayName = "Down"),
+	Right	UMETA(DisplayName = "Right"),
+	Left	UMETA(DisplayName = "Left"),
+};
+
 DECLARE_LOG_CATEGORY_EXTERN(CubeSurvival, Log, All);
 #define CSLOG_CALLINFO (FString(__FUNCTION__) + TEXT("(") + FString::FromInt(__LINE__) + TEXT(")"))
 #define CSLOG_S(Verbosity) UE_LOG(CubeSurvival, Verbosity, TEXT("%s"), *CSLOG_CALLINFO)

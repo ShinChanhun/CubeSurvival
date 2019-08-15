@@ -41,17 +41,18 @@ public:
 	void AddMap(FMapData MapData);
 	void WriteJsonMapData();
 	void ReadJsonMapData();
+
 	void SpawnMapDataToCube();
 
+	UFUNCTION()
 	void SetWorld(UWorld* World);
 
 private:
-	UPROPERTY()
 	TArray<FMapData> TotalMapData;
 
-	UPROPERTY()
 	TArray<TWeakObjectPtr<ACubeActor>> TotalCube;
 
+	
 	UPROPERTY()
 	UWorld* World;
 
