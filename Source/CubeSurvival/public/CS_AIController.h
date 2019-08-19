@@ -16,10 +16,13 @@ class CUBESURVIVAL_API ACS_AIController : public AAIController
 public:
 		ACS_AIController();
 	virtual void Possess(APawn* InPawn) override;
-
+	virtual void BeginPlay() override;
 	static const FName HomePosKey;
 	static const FName PatrolPosKey;
 	static const FName TargetKey;
+
+	void RunAI();
+	void StopAI();
 
 private:
 
@@ -28,6 +31,7 @@ private:
 	class UBehaviorTree* BTMonsterAsset;
 	UPROPERTY()
 	class UBlackboardData* BBMonsterAsset;
+
 
 	
 	

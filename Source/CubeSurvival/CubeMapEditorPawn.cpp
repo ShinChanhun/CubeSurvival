@@ -96,21 +96,21 @@ void ACubeMapEditorPawn::SetupPlayerInputComponent(class UInputComponent* InputC
 	//Hook up events for "ZoomIn"					
 	//InputComponent->BindAction("ZoomInME", IE_PresIE_Pressed,sed, this, &ACubeMapEditorPawn::ZoomIn);
 	//InputComponent->BindAction("ZoomInME", IE_ReleIE_Pressed,ased, this, &ACubeMapEditorPawn::ZoomOut);
-	InputComponent->BindAction("ClickME", IE_Pressed, this, &ACubeMapEditorPawn::ClickActor);
+	//InputComponent->BindAction("ClickME", IE_Pressed, this, &ACubeMapEditorPawn::ClickActor);
 
 
-	InputComponent->BindAction("CubeRotationRight", IE_Pressed, this, &ACubeMapEditorPawn::RotionSelectedActor_Right);
-	InputComponent->BindAction("CubeRotationLeft", IE_Pressed, this, &ACubeMapEditorPawn::RotationSelectedActor_Left);
+	//InputComponent->BindAction("CubeRotationRight", IE_Pressed, this, &ACubeMapEditorPawn::RotionSelectedActor_Right);
+	//InputComponent->BindAction("CubeRotationLeft", IE_Pressed, this, &ACubeMapEditorPawn::RotationSelectedActor_Left);
 
-	InputComponent->BindAction("CubeMoveTop", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Top);
-	InputComponent->BindAction("CubeMoveBottom", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Bottom);
-	InputComponent->BindAction("CubeMoveUp", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Up);
-	InputComponent->BindAction("CubeMoveDown", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Down);
-	InputComponent->BindAction("CubeMoveRight", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Right);
-	InputComponent->BindAction("CubeMoveLeft", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Left);
+	//InputComponent->BindAction("CubeMoveTop", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Top);
+	//InputComponent->BindAction("CubeMoveBottom", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Bottom);
+	//InputComponent->BindAction("CubeMoveUp", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Up);
+	//InputComponent->BindAction("CubeMoveDown", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Down);
+	//InputComponent->BindAction("CubeMoveRight", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Right);
+	//InputComponent->BindAction("CubeMoveLeft", IE_Pressed, this, &ACubeMapEditorPawn::MoveSelectedActor_Left);
 
-	InputComponent->BindAction("CubeMapSave", IE_Pressed, this, &ACubeMapEditorPawn::WriteCubeMapToJson);
-	InputComponent->BindAction("CubeMapLoad", IE_Pressed, this, &ACubeMapEditorPawn::ReadJsonToCubeMap);
+	//InputComponent->BindAction("CubeMapSave", IE_Pressed, this, &ACubeMapEditorPawn::WriteCubeMapToJson);
+	//InputComponent->BindAction("CubeMapLoad", IE_Pressed, this, &ACubeMapEditorPawn::ReadJsonToCubeMap);
 
 }
 

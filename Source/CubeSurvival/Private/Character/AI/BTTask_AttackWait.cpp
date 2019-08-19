@@ -2,7 +2,7 @@
 
 #include "BTTask_AttackWait.h"
 #include "CS_AIController.h"
-#include "UNomalMonsterAnimInstance.h"
+#include "NormalMonsterAnimInstance.h"
 #include "CSNormalMonsterCharacter.h"
 
 UBTTask_AttackWait::UBTTask_AttackWait(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
@@ -23,7 +23,7 @@ EBTNodeResult::Type UBTTask_AttackWait::ExecuteTask(UBehaviorTreeComponent& Owne
 void UBTTask_AttackWait::TickTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, float DeltaSeconds)
 {
 	auto NormalMonster = Cast<ACSNormalMonsterCharacter>(OwnerComp.GetAIOwner()->GetPawn());
-	auto NormalMonsterAnim = Cast< UUNomalMonsterAnimInstance>(NormalMonster->GetMesh()->GetAnimInstance());
+	auto NormalMonsterAnim = Cast< UNormalMonsterAnimInstance>(NormalMonster->GetMesh()->GetAnimInstance());
 	FBTWaitTaskMemory* MyMemory = (FBTWaitTaskMemory*)NodeMemory;
 	MyMemory->RemainingWaitTime -= DeltaSeconds;
 	if (NormalMonsterAnim->GetIsAttackDelayed() == true)

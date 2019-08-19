@@ -37,12 +37,19 @@ public:
 
 	void AttackCheck();
 
-
+	
 	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot) override;
+	
+	virtual	float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)override;
 public:
+	UPROPERTY(VisibleAnywhere, Category = UI)
+	class UWidgetComponent* MHPBarWidget;
 
 private:
 	
 	UPROPERTY()
-	class UUNomalMonsterAnimInstance* NormalMonsterAnim;
+	class UNormalMonsterAnimInstance* NormalMonsterAnim;
+
+	UPROPERTY()
+		class ACS_AIController* CSAIController;
 };

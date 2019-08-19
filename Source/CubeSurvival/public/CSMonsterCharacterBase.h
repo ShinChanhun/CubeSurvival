@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "CSCharacterBase.h"
-#include "UCharacterObject.h"
+#include "CubeSurvival.h"
+#include "CharacterResourceManager.h"
 #include "CSMonsterCharacterBase.generated.h"
 
 /**
@@ -13,13 +13,13 @@
 UENUM(BlueprintType)
 enum class MonsterSize : uint8
 {
-	MS_Small UMETA(DisplayName = "Small"),
-	MS_Middle UMETA(DisplayName = "Middle"),
-	MS_Big UMETA(DisplayName = "Big")
+	MS_Small	UMETA(DisplayName = "Small"),
+	MS_Middle	UMETA(DisplayName = "Middle"),
+	MS_Big		UMETA(DisplayName = "Big")
 };
 
 UCLASS()
-class CUBESURVIVAL_API ACSMonsterCharacterBase : public ACSCharacterBase
+class CUBESURVIVAL_API ACSMonsterCharacterBase : public ACharacter
 {
 	GENERATED_BODY()
 	
@@ -32,17 +32,26 @@ public:
 	virtual void MonsterCapsuleSize(class ACSMonsterCharacterBase* SetCharacter, float Size);
 
 
-	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot);
+	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot){}
 
+	void Jump();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:
 	UPROPERTY()
-	UUCharacterObject* MonsterCharacter;
+	UCharacterResourceManager* MonsterResource;
 	
 	TArray<FString> MonsterNameArray;
+
+	UPROPERTY(EditAnywhere, Category = Ability)
+	class UCSMonsterrAbility* MonsterAbility;
+
+
+
+
+
 
 private:
 	TMap<FString, MonsterSize> MonsterScale;

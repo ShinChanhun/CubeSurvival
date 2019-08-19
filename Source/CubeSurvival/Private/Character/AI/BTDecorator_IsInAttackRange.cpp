@@ -3,7 +3,7 @@
 #include "BTDecorator_IsInAttackRange.h"
 #include "CS_AIController.h"
 #include "CSNormalMonsterCharacter.h"
-#include "APlayerInputController.h"
+#include "CSPlayerCharacter.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 UBTDecorator_IsInAttackRange::UBTDecorator_IsInAttackRange()
@@ -21,7 +21,7 @@ bool UBTDecorator_IsInAttackRange::CalculateRawConditionValue(UBehaviorTreeCompo
 		return false;
 	}
 	
-	auto Target = Cast<AAPlayerInputController>(OwnerComp.GetBlackboardComponent()->GetValueAsObject(ACS_AIController::TargetKey));
+	auto Target = Cast<ACSPlayerCharacter>(OwnerComp.GetBlackboardComponent()->GetValueAsObject(ACS_AIController::TargetKey));
 	if (Target == nullptr)
 	{
 		return false;

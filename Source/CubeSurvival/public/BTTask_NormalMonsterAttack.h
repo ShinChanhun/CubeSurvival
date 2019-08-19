@@ -28,6 +28,5 @@ protected:
 
 
 private:
-	bool Damaged;
-	bool IsAttacking;
+	bool bAttacking;
 };

@@ -42,8 +42,6 @@ struct FMapData
 	//Direction Dir;
 	
 public:
-
-
 	static FMapData CreateMapDataStruct(int32 id, FString type, FVector position, FVector rotation, FString TextureName = "co_floor_wood_a01.co_floor_wood_a01")
 	{
 		FMapData mapData;

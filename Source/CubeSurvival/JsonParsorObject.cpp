@@ -2,10 +2,12 @@
 
 #include "JsonParsorObject.h"
 
+
 #define PROJECT_DIR_PATH FPaths::ProjectContentDir()
 #define DATA_DIR PROJECT_DIR_PATH + "Data/"
 #define MAP_DATA "MapData"
 #define MAPDATA_PATH DATA_DIR + MAP_DATA
+
 
 void UJsonParsorObject::Write(FString Path)
 {
@@ -15,7 +17,7 @@ void UJsonParsorObject::Write(FString Path)
 	//jsonObj->WriteObjectStart();
 
 	////TODO: Empty
-
+	//HACK:11
 	//jsonObj->WriteObjectEnd();
 	//jsonObj->Close();
 
