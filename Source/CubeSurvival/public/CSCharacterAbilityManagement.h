@@ -18,8 +18,12 @@ public:
 
 	void SetDamage(float NewDamage);
 	void SetHP(float NewHP);
+	void SetSpeed(float NewSpeed);
+
+	float GetSpeed() { return Speed; }
 	float GetAttack();
 	float GetHPRatio();
+	int32 GetDropExp() const { return Exp; }
 
 	FOnHPIsZeroDelegate OnHPIsZero;
 	FOnHPChangeDelegate OnHPChange;
@@ -33,6 +37,12 @@ protected:
 
 	UPROPERTY(EditInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = true))
 		float Attack;
+
+	UPROPERTY(EditInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = true))
+		float Speed;
+
+	UPROPERTY(EditInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = true))
+		int32 Exp;
 
 private:
 

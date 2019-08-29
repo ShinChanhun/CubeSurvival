@@ -1,21 +1,28 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CSNormalMonsterCharacter.h"
-#include "CSPlayerCharacter.h"
 #include "CS_AIController.h"
-#include "NormalMonsterAnimInstance.h"
 
-#include "CSMonsterrAbility.h"
+#include "NormalMonsterAnimInstance.h"
+#include "PlayerAnimInstance.h"
+
+#include "CSPlayerCharacter.h"
+#include "CSPlayerController.h"
 
 #include "DrawDebugHelpers.h"
+
 #include "Components/WidgetComponent.h"
 #include "CSMonsterWidget.h"
 
+#include "CharacterDamageState.h"
 
-#include "CharacterDamageComponent.h"
-#include "CharacterDamage.h"
-#include "DamageDeco.h"
-#include "FireDamageDeco.h"
+#include "CSMonsterrAbility.h"
+
+//#include "CSPlayerAbility.h"
+//#include "CharacterDamageComponent.h"
+//#include "CharacterDamage.h"
+//#include "DamageDeco.h"
+//#include "FireDamageDeco.h"
 ACSNormalMonsterCharacter::ACSNormalMonsterCharacter()
 {
 	PrimaryActorTick.bCanEverTick = false;
@@ -40,14 +47,21 @@ ACSNormalMonsterCharacter::ACSNormalMonsterCharacter()
 		MHPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
 	}
 	AIControllerClass = ACS_AIController::StaticClass();
+	bDead = false;
 	
 }
+//ACSNormalMonsterCharacter::~ACSNormalMonsterCharacter()
+//{
+//	GetWorldTimerManager().ClearTimer(DeadTimerHandle);
+//}
 
 void ACSNormalMonsterCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
 }
+
+
 
 void ACSNormalMonsterCharacter::PostInitializeComponents()
 {
@@ -59,21 +73,22 @@ void ACSNormalMonsterCharacter::PostInitializeComponents()
 
 	//UE_LOG(LogTemp, Log, TEXT("Null4"));
 	NormalMonsterAnim = Cast<UNormalMonsterAnimInstance>(GetMesh()->GetAnimInstance());
-	if (NormalMonsterAnim == nullptr) return;
+	CSCHECK(NormalMonsterAnim != nullptr);
+	//if (NormalMonsterAnim == nullptr) return;
 	NormalMonsterAnim->AttackHit.AddUObject(this, &ACSNormalMonsterCharacter::AttackCheck);
 
 	MonsterAbility->OnHPIsZero.AddLambda([this]()->void {
-		CSLOG(Warning, TEXT("OnMHPIsZero"));
-		NormalMonsterAnim->DeadAnim();
-	
+		NormalMonsterAnim->DeadAnim();	
 		CSAIController->StopAI();
 		SetActorEnableCollision(false);
 		MHPBarWidget->SetHiddenInGame(true);
-		FTimerHandle deadTimer;
-		GetWorld()->GetTimerManager().SetTimer(deadTimer, FTimerDelegate::CreateLambda([this]()->void {
-		
+		bDead = true;
+		FTimerHandle DeadTimerHandle;
+		GetWorld()->GetTimerManager().SetTimer(DeadTimerHandle, FTimerDelegate::CreateLambda([this]()->void 
+		{		
 			Destroy();
 		}), 5.0f, false);
+
 	});
 	//NormalMonsterAnim->AttackHit.AddLambda([this]()->void {Attack(); });
 //	GetCapsuleComponent()->OnComponentBeginOverlap.AddDynamic(this, &ACSNormalMonsterCharacter::OnCharacterOverlap);
@@ -120,26 +135,44 @@ void ACSNormalMonsterCharacter::AttackCheck()
 				return;
 			}
 
+			auto PlayerAnim = Cast<UPlayerAnimInstance>(Player->GetMesh()->GetAnimInstance());
+/*
+			auto Monster = Cast<ACSNormalMonsterCharacter>(HitResult.GetActor());
+			if (Monster == nullptr)
+			{
+				UE_LOG(LogTemp, Log, TEXT("Null2"));
+				return;
+			}
+			auto MonsterAnim = Cast<UNormalMonsterAnimInstance>(Monster->GetMesh()->GetAnimInstance());
+*/
+
 			if (Player->GetCapsuleComponent()->ComponentHasTag(FName(TEXT("Player"))))
 			{
 				FDamageEvent DamageEvent;
 
 				if (Player->GetInvincibility() == false)
-				{
-					class  FFireDamageDeco* Firedag = new FFireDamageDeco();
+				{	
 
-					//불 도트 데미지 넣는 방법 1
-					Player->CharacterState(ECharacterDamageState::FireState, Firedag);
-				
-					//불 도트 데미지 넣는 방법 2
-					
-					//Firedag->GetAttack(Player->GetPlayerStat(), Player);
+			//		//불 도트 데미지 넣는 방법 1
+			//		//Player->CharacterState(ECharacterDamageState::FireState, Firedag);
+			//	
+			//		//불 도트 데미지 넣는 방법 2
+			//		
+			//		//Firedag->GetAttack(Player->GetPlayerStat(), Player);
 
-					//일반 데미지 넣는 방법
-					//HitResult.Actor->TakeDamage(MonsterStat->GetAttack(), DamageEvent, GetController(), this);
-					
-					
-					Player->KnockBack(GetActorLocation());
+			//		//일반 데미지 넣는 방법
+					HitResult.Actor->TakeDamage(MonsterAbility->GetAttack(), DamageEvent, GetController(), this);
+					class FCharacterDamageState* Dmage = new FCharacterDamageState();
+					//변수로 가지지 못하는 이유 플레이어가 데미지를 받은 상태에서 몬스터가 사라져버리면(소멸자를 사용해서) 에러 발생  delete되어서 메모리 해제가 일어남 
+					//변수로 가질려면 FCharacterDamageState내에서 따로 해제 해주어야함
+
+					//Dmage->CharacterDamgeState(asdff, this, PlayerAbility);
+					//SetCharacterDamageState(Player, 2, EDamageState::FireState, EDamageState::IceState);
+					Player->SetCharacterDamageState(Dmage, 2, EDamageState::FireState,EDamageState::IceState);
+					//PlayerAnim->SetAnimationSpeed(0.5f);
+			//		
+			//		
+			//		//Player->KnockBack(GetActorLocation());
 				}
 			}
 		}
@@ -185,6 +218,18 @@ float ACSNormalMonsterCharacter::TakeDamage(float DamageAmount, struct FDamageEv
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
 	MonsterAbility->SetDamage(FinalDamage);
+	if (bDead == true)
+	{
+		if (EventInstigator->IsPlayerController())
+		{
+			auto CSPlayerController = Cast<ACSPlayerController>(EventInstigator);
+
+			CSCHECK(CSPlayerController != nullptr,0.0f);
+			
+				CSPlayerController->MonsterKill(this);
+			
+		}
+	}
 
 	return FinalDamage;
 }

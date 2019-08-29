@@ -85,7 +85,7 @@ UCharacterResourceManager::UCharacterResourceManager()
 		NormalMonsterAnim.Add(TEXT("02020086_m_blacklighting_wolf"), m_blacklighting_wolf_Anim.Class);
 	}
 
-
+	CSLOG(Warning, TEXT("UCharacterResourceManager"));
 }
 
 

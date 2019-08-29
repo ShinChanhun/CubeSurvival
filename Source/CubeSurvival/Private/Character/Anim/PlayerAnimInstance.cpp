@@ -10,7 +10,8 @@ UPlayerAnimInstance::UPlayerAnimInstance()
 {
 
 	CurrentPawnSpeed = 0.0f;
-	DashSpeed = 1.0f;
+
+	AnimationSpeed = 1.0f;
 	bInAir = false;
 	bJumpFinish = false;
 	bDash = false;
@@ -57,7 +58,7 @@ void UPlayerAnimInstance::PlayeAttackMontage()
 
 	if (!Montage_IsPlaying(AttackMontage))
 	{
-		Montage_Play(AttackMontage, 1.0f);
+		Montage_Play(AttackMontage, AnimationSpeed);
 	}
 }
 
@@ -66,7 +67,7 @@ void UPlayerAnimInstance::PlayDashMontage()
 	CSCHECK(!bDead);
 	if (!Montage_IsPlaying(DashMontage))
 	{
-		Montage_Play(DashMontage, 1.5f);
+		Montage_Play(DashMontage, AnimationSpeed+0.5f);
 	}
 }
 

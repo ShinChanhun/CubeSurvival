@@ -41,18 +41,21 @@ public:
 	inline float GetCurrentPawnSpeed() const { return CurrentPawnSpeed; }
 	inline UAnimMontage* GetDashMontage() const { return DashMontage; }
 
+	void SetAnimationSpeed(float InAnimationSpeed) { AnimationSpeed= InAnimationSpeed; }
+
 private:
-	UFUNCTION()
-		void AnimNotify_AttackHitCheck();
 
 	UFUNCTION()
-		void AnimNotify_NextAttackCheck();
+	void AnimNotify_AttackHitCheck();
 
 	UFUNCTION()
-		void AnimNotify_DashEnd();
+	void AnimNotify_NextAttackCheck();
 
 	UFUNCTION()
-		void AnimNotify_Damaged();
+	void AnimNotify_DashEnd();
+
+	UFUNCTION()
+	void AnimNotify_Damaged();
 
 	FName GetAttackMontageSectionName(int32 Section);
 
@@ -61,38 +64,34 @@ public:
 	FOnAttackHitCheckDelegate OnAttackHitCheck;
 	FOnDashDelegate OnDash;
 
-	UPROPERTY(EditAnywhere,  Category = Pawn, Meta = (AllowPrivateAccess = true))
-		float DashSpeed;
-
 private:
 
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool bInAir;
+	bool bInAir;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool bDash;
+	bool bDash;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool bJumpFinish;
+	bool bJumpFinish;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool bDamaged;
+	bool bDamaged;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		float CurrentPawnSpeed;
+	float CurrentPawnSpeed;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		UAnimMontage* AttackMontage;
+	UAnimMontage* AttackMontage;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
-		UAnimMontage* DashMontage;
+	UAnimMontage* DashMontage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
-		bool bDead;
+	bool bDead;
 
-
-	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
+	float AnimationSpeed;
 	
 	
 };

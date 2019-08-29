@@ -12,11 +12,7 @@
 ACSMonsterCharacterBase::ACSMonsterCharacterBase()
 {
 	PrimaryActorTick.bCanEverTick = false;
-	MonsterResource = CreateDefaultSubobject<UCharacterResourceManager>(TEXT("CHARACTERRESOURCE"));
 
-	//MonsterStat = CreateDefaultSubobject<UCSMonsterrAbility>(TEXT("MONSTERABILITY"));원래 이거였습니다 변수 이름도 바꾸는걸 추천한다. 아니면 바꾸고 다시 컴파일하자 에러뜬다
-
-	//아래 이름은 변수 이름만 바꾼거
 	MonsterAbility = CreateDefaultSubobject<UCSMonsterrAbility>(TEXT("MONSTERABILITY"));
 
 	MonsterNameArray.Add(TEXT("02020002_m_redmushroom"));
@@ -28,6 +24,11 @@ ACSMonsterCharacterBase::ACSMonsterCharacterBase()
 	MonsterScale.Add(TEXT("02020023_m_twingworker"), MonsterSize::MS_Small);
 	MonsterScale.Add(TEXT("02020031_m_regenworm"), MonsterSize::MS_Small);
 	MonsterScale.Add(TEXT("02020086_m_blacklighting_wolf"), MonsterSize::MS_Middle);
+
+
+	//MonsterResource = CreateDefaultSubobject<UCharacterResourceManager>(TEXT("CHARACTERRESOURCE"));//에러가 나면 다시 이걸로 바꿀것
+
+	
 	
 }
 
@@ -66,8 +67,10 @@ void ACSMonsterCharacterBase::MonsterSetting(class ACSMonsterCharacterBase* SetC
 		MonsterCapsuleSize(SetCharacter, 80.0f);
 		break;
 	}
-	//auto CSGameInstance = Cast<UCSGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-	//MonsterResource = UCSGameInstance::GetGameInstance()->GetCharacterResourceManager();
+	CSGameInstance = UCSGameInstance::GetGameInstance();
+	CSCHECK(CSGameInstance != nullptr);
+	MonsterResource = CSGameInstance->GetCharacterResourceManager();//생성자에서 호출하다가 값이 null로 되어서 여기로 호출
+	CSCHECK(MonsterResource != nullptr);
 	SetCharacter->GetMesh()->SetSkeletalMesh(MonsterResource->GetMonsterMesh()[MonsterName]);
 	SetCharacter->GetMesh()->SetAnimInstanceClass(MonsterResource->GetNormalMonsterAnim()[MonsterName]);
 	SetCharacter->GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
@@ -89,32 +92,15 @@ void ACSMonsterCharacterBase::MonsterSetting(class ACSMonsterCharacterBase* SetC
 	SetCharacter->GetCharacterMovement()->RotationRate = FRotator(0.0f, 480.0f, 0.0f);
 	
 	MonsterAbility->SetMonsterName(MonsterName);
-	//class CharacterDamageComponent* deco = new FireDamageDeco(new DamageDeco(new CharacterDamage(MonsterStat->GetAttack())));
-
-	//deco->GetAttack();
-
-	//delete deco;
-	//float damage= MonsterStat->GetAttack() + NewObject<UCSFireDamageDeco>()->GetAttack();
-	// NewObject< UCSFireDamageDeco>(NewObject<UCSDamageDeco>(NewObject<UCSMonsterDamage>()));
-	
-	//추가 공격들을 배열에 추가
-	//class UCSCharacterDamageComponent* cdc = MonsterStat;
-	//cdc->dearr.Add(NewObject<UCSFireDamageDeco>());
-	//cdc->dearr.Add(NewObject<UCSDamageDeco>());
-	//cdc->dearr.Add(MonsterStat);
-	//MonsterStat->dearr.Add(NewObject<UCSFireDamageDeco>());
-	//MonsterStat->dearr.Add(NewObject<UCSDamageDeco>());
-	//배열에서 꺼내어 공격
-	/*for (int32 i = 0; i != MonsterStat->dearr.Num(); i++)
-	{
-		MonsterStat->dearr[i]->GetAttack();
-	}
-	MonsterStat->GetAttack();
-	MonsterStat->dearr.Empty();*/
 }
 
 void ACSMonsterCharacterBase::MonsterCapsuleSize(class ACSMonsterCharacterBase* SetCharacter,float Size)
 {
 	SetCharacter->GetCapsuleComponent()->SetCapsuleRadius(Size);
 	SetCharacter->GetCapsuleComponent()->SetCapsuleHalfHeight(Size);
+}
+
+int32 ACSMonsterCharacterBase::GetExp() const
+{
+	return MonsterAbility->GetDropExp();
 }

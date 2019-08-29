@@ -26,10 +26,10 @@ UCSCharacterStatDataManager* UCSGameInstance::GetCharacterStatDataManager()
 	return CharacterStatData;
 }
 
-//캐릭터 리소스 디버깅 안되는거 실화인가?(static)
+
  UCharacterResourceManager* UCSGameInstance::GetCharacterResourceManager()
 {
-	 if (!CharacterResource)
+	 if (CharacterResource==nullptr)
 	 {
 		 CharacterResource = NewObject< UCharacterResourceManager>();
 	 }
@@ -41,7 +41,7 @@ UCSCharacterStatDataManager* UCSGameInstance::GetCharacterStatDataManager()
 
  UCSGameInstance* UCSGameInstance::GetGameInstance()
  {
-	 if (!GameInstance)
+	 if (GameInstance == nullptr)
 	 {
 		 GameInstance = NewObject<UCSGameInstance>();
 	 }

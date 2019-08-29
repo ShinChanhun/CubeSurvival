@@ -1,74 +1,43 @@
-
-
 #include "CSPlayerCharacter.h"
-
-
 #include "CharacterResourceManager.h"
 #include "PlayerAnimInstance.h"
-#include "SwordActor.h"
-#include "DrawDebugHelpers.h"
+#include "CSPlayerAbility.h"
+
+#include "CSPlayerController.h"
+#include "CSPlayerState.h"
+#include "CSGameInstance.h"
+
 #include "NormalMonsterAnimInstance.h"
 #include "CSNormalMonsterCharacter.h"
 
-#include "CSPlayerAbility.h"
-//#include "CSPlayerDamage.h"
 #include "Components/WidgetComponent.h"
-#include "CSPlayerWidget.h"
+#include "CSHUDWidget.h"
 
-
-#include "CharacterDamageComponent.h"
-#include "CharacterDamage.h"
-#include "DamageDeco.h"
-#include "FireDamageDeco.h"
-
-#include "CSPlayerController.h"
-
-#include "CSGameInstance.h"
+#include "SwordActor.h"
+#include "DrawDebugHelpers.h"
 
 ACSPlayerCharacter::ACSPlayerCharacter()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//static으로 바꿔도 (비쥬얼로 에디터를 켰을 때)생성자를 두번 호출하기 때문에  한번은 불러 올 수 있지만 두번째는 값이 사라져 있다.
-	//(싱글톤을 따로 만들어야 할거 같다. 근데 될지 안될지 잘 모르겠다;;) Uworld가 생성하기전에 불러와서 getworld값은 null로 바뀐다.  싱글톤으로 해도 안됨
-	//UCharacterResourceManager* PlayerResource = UCSGameInstance::GetCharacterResourceManager();//static으로 만들었을 때
-	//auto* PlayerResource = Cast<UCSGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));//getworld로 받아왔을때 null
+	
+	CSGameInstance = UCSGameInstance::GetGameInstance();
+	PlayerResource = CSGameInstance->GetCharacterResourceManager();
+	//PlayerResource = CreateDefaultSubobject<UCharacterResourceManager>(TEXT("PlayerResource")); //에러가 나면 다시 이걸로 바꿀것
 
-	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-	//auto testsssss = UCSGameInstance::GetInstance()->GetCharacterResourceManager();
-
-	  //PlayerResource = UCSGameInstance::GetGameInstance()->GetCharacterResourceManager();
-		//UCSGameInstance::GetCharacterResourceManager();
-
-	PlayerResource = CreateDefaultSubobject<UCharacterResourceManager>(TEXT("PlayerResource"));
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
-
+	
 	CharacterMovements = Cast<UCharacterMovementComponent>(GetCharacterMovement());
 	PlayerAbility = CreateDefaultSubobject<UCSPlayerAbility>(TEXT("PlAYERABILITY"));
-	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
-
 
 	SpringArm->SetupAttachment((USceneComponent*)GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
-	HPBarWidget->SetupAttachment(GetMesh());
 
 	CameraZoom = 700.0f;
 	SetControlMode(0);
 	SpringArm->TargetArmLength = CameraZoom;
 	SpringArm->SetRelativeRotation(FRotator(-30.0f, 0.0f, 0.0f));
 	SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, 80.0f));
-
-	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
-	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
-
-	static ConstructorHelpers::FClassFinder<UUserWidget> UI_HUD(TEXT("WidgetBlueprint'/Game/UI/UI_HPBar.UI_HPBar_C'"));
-	if (UI_HUD.Succeeded())
-	{
-		HPBarWidget->SetWidgetClass(UI_HUD.Class);
-		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
-	}
 
 	if (PlayerResource != NULL)
 	{
@@ -83,16 +52,16 @@ ACSPlayerCharacter::ACSPlayerCharacter()
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("CSCharacter"));
 
 	GetCharacterMovement()->JumpZVelocity = 600.0f;
-	CharacterSpeed = 600.0f;
-	CharacterDashSpeed = 1.0f;
+
+	DashSpeed = 1.0f;
 	MaxCombo = 4;
 
 	bAttacking = false;
 	bInvincibility = false;
 	AttackEndComboState();
 	SetActorHiddenInGame(true);
-	HPBarWidget->SetHiddenInGame(true);
 	bCanBeDamaged = false;
+	bStun = false;
 }
 
 void ACSPlayerCharacter::PostInitializeComponents()
@@ -117,23 +86,12 @@ void ACSPlayerCharacter::PostInitializeComponents()
 	PlayerAnim->OnDash.AddLambda([this]()->void {
 		PlayerAnim->SetDash(false);
 		PlayerAnim->Montage_Stop(0.3f, PlayerAnim->GetDashMontage());
-		PlayerAnim->DashSpeed = 1.0f;
-	});
+		DashSpeed = 1.0f;
+	});	
 
 	//AddUObject UObject 기반 멤버 함수 델리게이트를 추가합니다. UObject 델리게이트는 자신의 오브젝트에 대한 약 레퍼런스를 유지합니다.
 	PlayerAnim->OnAttackHitCheck.AddUObject(this, &ACSPlayerCharacter::AttackCheck);
 	GetCapsuleComponent()->OnComponentHit.AddDynamic(this, &ACSPlayerCharacter::PlayerHit);;
-
-	PlayerAbility->SetNewLevel(1);
-
-	/*PlayerAbility->OnHPIsZero.AddLambda([this]()->void {
-		CSLOG(Warning, TEXT("OnHPIsZero"));
-		PlayerAnim->DeadAnim();
-		SetActorEnableCollision(false);
-	});*/
-
-
-
 
 }
 
@@ -142,7 +100,7 @@ void ACSPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CharacterMovements->MaxWalkSpeed = CharacterSpeed;
+
 	//무기 소켓
 	FName WeaponSocket(TEXT("hand_socket_R"));
 
@@ -156,9 +114,9 @@ void ACSPlayerCharacter::BeginPlay()
 	CSCHECK(CSPlayerController != nullptr);
 
 	//구분해서 사용하기
-	SetCharacterState(ECharacterState::LOADING);
+	SetCharacterSceneState(ECharacterState::LOADING);
 	
-	SetCharacterState(ECharacterState::READY);
+	SetCharacterSceneState(ECharacterState::READY);
 }
 
 // Called every frame
@@ -171,7 +129,7 @@ void ACSPlayerCharacter::Tick(float DeltaTime)
 		AddMovementInput(GetActorRotation().Vector(), 1.0f);
 	}
 
-	CharacterMovements->MaxWalkSpeed = CharacterSpeed * PlayerAnim->DashSpeed;
+	CharacterMovements->MaxWalkSpeed = (CharacterSpeed + PlayerAbility->GetSpeed()*DashSpeed);//
 }
 
 // Called to bind functionality to input
@@ -187,14 +145,16 @@ void ACSPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	PlayerInputComponent->BindAction(TEXT("ZoomIn"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::ZoomIn);
 	PlayerInputComponent->BindAction(TEXT("ZoomOut"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::ZoomOut);
 	PlayerInputComponent->BindAction(TEXT("Dash"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::Dash);
+	PlayerInputComponent->BindAction(TEXT("LSlotMove"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::LSlotMove);
+	PlayerInputComponent->BindAction(TEXT("RSlotMove"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::RSlotMove);
+	PlayerInputComponent->BindAction(TEXT("ItemSelect"), EInputEvent::IE_Pressed, this, &ACSPlayerCharacter::ItemSelect);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
-
+	
 }
-
 
 void ACSPlayerCharacter::UpDown(float NewAxisValue)
 {
-	if (PlayerAnim->GetDamage() == true)
+	if (PlayerAnim->GetDamage() == true || bStun == true)
 	{
 		return;
 	}
@@ -204,7 +164,7 @@ void ACSPlayerCharacter::UpDown(float NewAxisValue)
 
 void ACSPlayerCharacter::LeftRight(float NewAxisValue)
 {
-	if (PlayerAnim->GetDamage() == true)
+	if (PlayerAnim->GetDamage() == true || bStun == true)
 	{
 		return;
 	}
@@ -213,7 +173,7 @@ void ACSPlayerCharacter::LeftRight(float NewAxisValue)
 
 void ACSPlayerCharacter::LookUp(float NewAxisValue)
 {
-	if (PlayerAnim->GetDamage() == true)
+	if (PlayerAnim->GetDamage() == true || bStun == true)
 	{
 		return;
 	}
@@ -222,7 +182,7 @@ void ACSPlayerCharacter::LookUp(float NewAxisValue)
 
 void ACSPlayerCharacter::Turn(float NewAxisValue)
 {
-	if (PlayerAnim->GetDamage() == true)
+	if (PlayerAnim->GetDamage() == true || bStun == true)
 	{
 		return;
 	}
@@ -232,7 +192,7 @@ void ACSPlayerCharacter::Turn(float NewAxisValue)
 void ACSPlayerCharacter::Jump()
 {
 
-	if (PlayerAnim->GetJumpFinish() == true || PlayerAnim->GetDamage() == true || PlayerAnim->GetDead() == true)
+	if (PlayerAnim->GetJumpFinish() == true || PlayerAnim->GetDamage() == true || PlayerAnim->GetDead() == true || bStun == true)
 	{
 		return;
 	}
@@ -270,19 +230,33 @@ void ACSPlayerCharacter::ZoomOut()
 
 void ACSPlayerCharacter::Dash()
 {
-	if (PlayerAnim->GetDash() == true || bAttacking == true || PlayerAnim->GetCurrentPawnSpeed() == 0.0f || PlayerAnim->GetInAir() == true || PlayerAnim->GetDamage() == true || PlayerAnim->GetDead() == true)
+	if (PlayerAnim->GetDash() == true || bAttacking == true || PlayerAnim->GetCurrentPawnSpeed() == 0.0f || PlayerAnim->GetInAir() == true || PlayerAnim->GetDamage() == true || PlayerAnim->GetDead() == true || bStun == true)
 		return;
 
 	PlayerAnim->PlayDashMontage();
-	PlayerAnim->DashSpeed = 2.0f;
+	DashSpeed = 1.2f;
 	PlayerAnim->SetJumpFinish(false);
 	PlayerAnim->SetDash(true);
 }
 
+void ACSPlayerCharacter::LSlotMove()
+{
+	CSPlayerController->GetHUDWidget()->LMoveQuickSlot();
+}
+
+void ACSPlayerCharacter::RSlotMove()
+{
+	CSPlayerController->GetHUDWidget()->RMoveQuickSlot();
+}
+
+void ACSPlayerCharacter::ItemSelect()
+{
+	CSPlayerController->GetHUDWidget()->SelectItem();
+}
 
 void ACSPlayerCharacter::Attatck()
 {
-	if (PlayerAnim->GetDash() == true)
+	if (PlayerAnim->GetDash() == true || PlayerAnim->GetDamage() == true || PlayerAnim->GetDead() == true || bStun == true)
 		return;
 
 	if (bAttacking == true)
@@ -301,12 +275,18 @@ void ACSPlayerCharacter::Attatck()
 		PlayerAnim->JumpToAttackMontageSection(CurrentCombo);
 		bAttacking = true;
 
-		//TODO:데미지 해제 역할 코드
-		/*FDamageDeco* adss = *CharacterStateDamage.Find(ECharacterDamageState::FireState);
-		adss->DmageRelease(this);
-		CharacterStateDamage.Remove(ECharacterDamageState::FireState);*/
-		//adss 해제가 되는지 확인할것
-		
+		/*	if (CharacterDamageState != nullptr)
+			{
+				CharacterDamageState->ReleaseDamage(this, EDamageState::FireState);
+			}*/
+			//TODO:데미지 해제 역할 코드//수정
+		/*	if (CharacterStateDamage.Num() != 0)
+			{
+				FCharacterDamageState* InCharacterDamgeState = *CharacterStateDamage.Find(EDamageState::FireState);
+				InCharacterDamgeState->ReleaseDamage(this, EDamageState::FireState);
+				CharacterStateDamage.Remove(EDamageState::FireState);
+			}*/
+
 	}
 }
 
@@ -353,6 +333,7 @@ void ACSPlayerCharacter::AttackCheck()
 				FDamageEvent DamageEvent;
 
 				HitResult.Actor->TakeDamage(PlayerAbility->GetAttack(), DamageEvent, GetController(), this);
+		
 				MonsterAnim->SetIsAttackDelayed(true);
 				MonsterAnim->SetIsDamaged(true);
 				MonsterAnim->SetIsAttacking(false);
@@ -432,7 +413,28 @@ void ACSPlayerCharacter::KnockBack(FVector HitLocation)
 		GetCharacterMovement()->Launch(KnockBackDirection*1500.0f);
 	}
 
-	GetWorldTimerManager().SetTimer(Timer, this, &ACSPlayerCharacter::ChangeInvincibility, 3.0f, false);//무적 카운트 들어감
+	GetWorldTimerManager().SetTimer(Timer, this, &ACSPlayerCharacter::ChangeInvincibility, 1.0f, false);//무적 카운트 들어감
+}
+
+void ACSPlayerCharacter::SetCharacterDamageState(FCharacterDamageState* InCharacterDamgeState, int DamgeState,...)
+{
+	//여기 수정해야함  맵이나 배열로 해제 하는 방법으로 해야함
+	//
+	//CharacterDamageState = InCharacterDamgeState;
+	//CharacterDamageStateArry.Add(InCharacterDamgeState);
+
+	va_list VADamgeNum;
+	va_start(VADamgeNum, DamgeState);
+
+	for(int i=0; i< DamgeState; i++)
+	{
+		EDamageState asdff = va_arg(VADamgeNum, EDamageState);
+		InCharacterDamgeState->CharacterDamgeState(asdff, this, PlayerAbility);//따로 데미지를 넣는 방법
+		CharacterStateDamage.Add(asdff, InCharacterDamgeState);
+	}
+
+	va_end(VADamgeNum);
+	
 }
 
 //몬스터와 부딪혔을 때 넉백
@@ -445,7 +447,7 @@ void ACSPlayerCharacter::PlayerHit(UPrimitiveComponent* HitComponent, AActor* Ot
 			auto controller = Cast< AController>(OtherActor);
 			FDamageEvent DamageEvent;
 			this->TakeDamage(10.0f, DamageEvent, controller, OtherActor);
-			KnockBack(OtherActor->GetActorLocation());
+			
 		}
 
 	}
@@ -462,72 +464,12 @@ float ACSPlayerCharacter::TakeDamage(float DamageAmount, struct FDamageEvent con
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
 	PlayerAbility->SetDamage(FinalDamage);
+	KnockBack(DamageCauser->GetActorLocation());
 
 	return FinalDamage;
 }
 
-//TODO:아래 함수들 상태 데미지 클래스 따로 만들기
-
-void ACSPlayerCharacter::CharacterState(enum ECharacterDamageState PlayerState, class FDamageDeco* DamageClass)
-{
-	if (CharacterStateArry.Num() != 0)
-	{
-		if (CharacterStateArry.Find(PlayerState))
-		{
-			return;
-		}
-	}
-
-	CharacterStateArry.Add(PlayerState);
-
-	UpdateStateDamage(PlayerState);
-
-}
-
-void ACSPlayerCharacter::UpdateStateDamage(enum ECharacterDamageState PlayerState)//오브젝트들 도트데미지 넣을 때 사용
-{
-	ECharacterDamageState EPlayerState = PlayerState;
-
-	switch (EPlayerState)
-	{
-	case ECharacterDamageState::FireState:
-	{
-		UE_LOG(LogTemp, Log, TEXT("fire"));
-		FFireDamageDeco* Firedag = new FFireDamageDeco();
-	
-		Firedag->FireAttack(PlayerAbility,this);
-
-		//TODO:상태값 및 데미지 클래스 넣는 코드
-		CharacterStateDamage.Add(PlayerState, Firedag);
-		break;
-	}
-	case ECharacterDamageState::IceState:
-	{	UE_LOG(LogTemp, Log, TEXT("Ice"));
-		break;
-	}
-	case ECharacterDamageState::PoisonState:
-	{//PlayerStat->SetDamage(FinalDamage);
-		UE_LOG(LogTemp, Log, TEXT("Poison"));
-		break;
-	}
-	case ECharacterDamageState::StunState:
-	{
-		UE_LOG(LogTemp, Log, TEXT("Stun"));
-		break;
-	}
-	case ECharacterDamageState::NormalState:
-	{
-		UE_LOG(LogTemp, Log, TEXT("Stun"));
-		break;
-	}
-
-	default:
-	{
-		break;
-	}
-	}
-}
-void ACSPlayerCharacter::SetCharacterState(ECharacterState NewState)
+void ACSPlayerCharacter::SetCharacterSceneState(ECharacterState NewState)
 {
 	CSCHECK(CurrentState != NewState);
 	CurrentState = NewState;
@@ -536,28 +478,34 @@ void ACSPlayerCharacter::SetCharacterState(ECharacterState NewState)
 	{
 	case ECharacterState::LOADING:
 	{
-		SetActorHiddenInGame(true);
-		HPBarWidget->SetHiddenInGame(true);
-		bCanBeDamaged = false;
-		break;
+		//DisableInput(CSPlayerController);
 		
+		auto CSPlayerState = Cast<ACSPlayerState>(PlayerState);
+		CSCHECK(CSPlayerState != nullptr);
+		PlayerAbility->SetNewLevel(CSPlayerState->GetCharacterLevel());
 
+		CharacterSpeed = 50.0f;
+		CharacterMovements->MaxWalkSpeed = CharacterSpeed+ PlayerAbility->GetSpeed();
+
+		CSPlayerController->GetHUDWidget()->BindCharacterStat(PlayerAbility);
+	
+		SetActorHiddenInGame(true);
+
+		bCanBeDamaged = false;
+
+		break;
 	}
 	case ECharacterState::READY:
 	{
 		SetActorHiddenInGame(false);
-		HPBarWidget->SetHiddenInGame(false);
 		bCanBeDamaged = true;
 
 		PlayerAbility->OnHPIsZero.AddLambda([this]()->void
 		{
-			SetCharacterState(ECharacterState::DEAD);
+			SetCharacterSceneState(ECharacterState::DEAD);
 		}
 		);
 
-		auto CharacterWidget = Cast<UCSPlayerWidget>(HPBarWidget->GetUserWidgetObject());
-		CSCHECK(CharacterWidget != nullptr);
-		CharacterWidget->BindCharacterStat(PlayerAbility);
 		break;
 	}
 	case ECharacterState::DEAD:
@@ -566,17 +514,12 @@ void ACSPlayerCharacter::SetCharacterState(ECharacterState NewState)
 		PlayerAnim->DeadAnim();
 		bCanBeDamaged = false;
 		break;
-		//HPBarWidget->SetHiddenInGame(false);
-		//GetMesh()->SetHiddenInGame(false);
 	}
 	default:
 		break;
 	}
 }
-ECharacterState ACSPlayerCharacter::GetCharacterState() const
-{
-	return CurrentState;
-}
+
 
 
 

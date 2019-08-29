@@ -4,6 +4,7 @@
 
 FCharacterDamage::FCharacterDamage()
 {
+	Attack = 0;
 }
 
 FCharacterDamage::FCharacterDamage(float InAttack)

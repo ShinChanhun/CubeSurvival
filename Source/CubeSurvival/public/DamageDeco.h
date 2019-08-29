@@ -16,7 +16,7 @@ public:
 
 	virtual float GetAttack()override;
 
-	virtual float ContinuousDamage();
+	virtual float ContinuousDamage();//지속 데미지 도트, 슬로우, 스턴
 
 	UFUNCTION()
 	virtual	void DmageRelease(class AActor* FireReleaseTarget);
