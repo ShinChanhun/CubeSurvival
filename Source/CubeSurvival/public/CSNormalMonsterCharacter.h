@@ -14,7 +14,6 @@ class CUBESURVIVAL_API ACSNormalMonsterCharacter : public ACSMonsterCharacterBas
 	GENERATED_BODY()
 public:
 		ACSNormalMonsterCharacter();
-		//~ACSNormalMonsterCharacter();
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -42,14 +41,9 @@ public:
 	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot) override;
 	
 	virtual	float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)override;
-
-	
-	
 public:
 	UPROPERTY(VisibleAnywhere, Category = UI)
 	class UWidgetComponent* MHPBarWidget;
-
-	bool bDead;
 
 private:
 	
@@ -58,6 +52,4 @@ private:
 
 	UPROPERTY()
 		class ACS_AIController* CSAIController;
-
-
 };

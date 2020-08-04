@@ -17,7 +17,6 @@ class CUBESURVIVAL_API UCSPlayerAbility : public UCSCharacterAbilityManagement
 public:
 	UCSPlayerAbility();
 	void SetNewLevel(int32 NewLevel);
-	//float GetAttack();
 
 private:
 	UPROPERTY(EditInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = true))

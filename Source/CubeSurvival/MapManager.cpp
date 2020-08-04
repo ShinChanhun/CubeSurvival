@@ -50,10 +50,6 @@ void UMapManager::SpawnMapDataToCube()
 				(ACubeActor*)World->SpawnActor(ACubeActor::StaticClass(), location.Get(), Rotator.Get())
 			);
 
-		/*	TSharedPtr<ACubeActor> ttCA = MakeShareable(
-				(ACubeActor*)World->SpawnActor(ACubeActor::StaticClass(), location.Get(), Rotator.Get())
-			);*/
-
 			tCA->Initialize(md.TextureName);
 
 			TotalCube.Add(tCA);

@@ -31,7 +31,7 @@ private:
 	
 
 public:	
-	UFUNCTION()//안붙혔을경우 2번 불림
+	UFUNCTION()
 	void MonsterSpawn(class ACSMonsterCharacterBase* Monster, bool bInSpawnRnd);
 
 	UPROPERTY(EditAnywhere, Category = "Spawning")

@@ -2,9 +2,9 @@
 
 #include "BTTask_TurnToTarget.h"
 #include "CS_AIController.h"
-//#include "NormalMonsterAnimInstance.h"
+#include "UNomalMonsterAnimInstance.h"
 #include "CSNormalMonsterCharacter.h"
-#include "CSPlayerCharacter.h"
+#include "APlayerInputController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
 UBTTask_TurnToTarget::UBTTask_TurnToTarget()
@@ -24,7 +24,7 @@ EBTNodeResult::Type UBTTask_TurnToTarget::ExecuteTask(UBehaviorTreeComponent& Ow
 		return EBTNodeResult::Failed;
 	}
 
-	auto Target = Cast<ACSPlayerCharacter>(OwnerComp.GetBlackboardComponent()->GetValueAsObject(ACS_AIController::TargetKey));
+	auto Target = Cast<AAPlayerInputController>(OwnerComp.GetBlackboardComponent()->GetValueAsObject(ACS_AIController::TargetKey));
 	if (Target == nullptr)
 	{
 		return EBTNodeResult::Failed;

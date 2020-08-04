@@ -2,10 +2,9 @@
 
 #include "BTService_Detect.h"
 #include"CS_AIController.h"
-#include "CSPlayerCharacter.h"
+#include"APlayerInputController.h"
 #include"BehaviorTree/BlackboardComponent.h"
 #include"DrawDebugHelpers.h"
-#include "CSNormalMonsterCharacter.h"
 
 UBTService_Detect::UBTService_Detect()
 {
@@ -18,25 +17,13 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	Super::TickNode(OwnerComp, NodeMemory, DeltaSeconds);
 
 	APawn* ControllingPawn = OwnerComp.GetAIOwner()->GetPawn();
-	if (ControllingPawn==nullptr)
-	{
-		return;
-	}
-
-	auto NormalMonster = Cast<ACSNormalMonsterCharacter>(OwnerComp.GetAIOwner()->GetPawn());
-	if (NormalMonster == nullptr)
-	{
-		return;
-	}
+	if (nullptr == ControllingPawn) return;
 
 	UWorld* World = ControllingPawn->GetWorld();
 	FVector Center = ControllingPawn->GetActorLocation();
 	float DetectRadius = 600.0f;
 
-	if (World==nullptr)
-	{
-		return;
-	}
+	if (nullptr == World) return;
 
 	TArray<FOverlapResult> OverlapResults;
 	FCollisionQueryParams CollisionQueryParam(NAME_None, false, ControllingPawn);
@@ -52,21 +39,19 @@ void UBTService_Detect::TickNode(UBehaviorTreeComponent& OwnerComp, uint8* NodeM
 	{
 		for (auto OverlapResult : OverlapResults)
 		{
-			ACSPlayerCharacter* Player = Cast< ACSPlayerCharacter>(OverlapResult.GetActor());
+			AAPlayerInputController* Player = Cast< AAPlayerInputController>(OverlapResult.GetActor());
 
 			if (Player&&Player->GetController()->IsPlayerController())
 			{
 				OwnerComp.GetBlackboardComponent()->SetValueAsObject(ACS_AIController::TargetKey, Player);
 				
 				DrawDebugSphere(World, Center, DetectRadius, 16, FColor::Green, false, 0.2f);
-				//NormalMonster->Jump(); มกวม~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 				return;
 			}
 		}
 	}
 	else
 	{
-		
 		OwnerComp.GetBlackboardComponent()->SetValueAsObject(ACS_AIController::TargetKey, nullptr);
 		//UE_LOG(LogTemp, Log, TEXT("PlayeAttackMontage"));
 	}

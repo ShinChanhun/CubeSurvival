@@ -12,12 +12,12 @@ void ACSGameState::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//
+	CSLOG_S(Warning);
 
 
-	//MapManager = MakeWeakObjectPtr(NewObject<UMapManager>());
-	//MapManager->SetWorld(GetWorld());
-	//MapManager->SpawnMapDataToCube();
+	MapManager = MakeWeakObjectPtr(NewObject<UMapManager>());
+	MapManager->SetWorld(GetWorld());
+	MapManager->SpawnMapDataToCube();
 	//MapManager = NewObject<UMapManager>();
 
 }

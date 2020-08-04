@@ -18,18 +18,18 @@ public:
 
 	virtual float ContinuousDamage() override;
 
-	//UFUNCTION()
-	//float GetAttack(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget);	
+	UFUNCTION()
+	float GetAttack(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget);	
 
 	UFUNCTION()
-	void FireAttack(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget, class FCharacterDamageState* DamageState);
+	void FireAttack(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget);
 
 	UFUNCTION()
-	void DmageDelete(class AActor* FireReleaseTarget);
+	void DmageRelease(class AActor* FireReleaseTarget);
 
 private:
 	UFUNCTION()
-	void FireDotDamage(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget, class FCharacterDamageState* DamageState);
+	void FireDotDamage(class UCSCharacterAbilityManagement* CharacterAbility, class AActor* FireDamagedTarget);
 	
 private:
 	float FireDamage;

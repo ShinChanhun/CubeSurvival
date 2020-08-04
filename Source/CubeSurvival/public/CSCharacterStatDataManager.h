@@ -18,7 +18,7 @@ struct FCSPlayerStatData :public FTableRowBase
 	GENERATED_BODY()
 
 public:
-	FCSPlayerStatData() :Level(1), MaxHP(100.0f), Attack(10.0f), Speed(600.0f), NextExp(30) {}
+	FCSPlayerStatData() :Level(1), MaxHP(100.0f), Attack(10.0f), DropExp(10), NextExp(30) {}
 
 	//제이슨으로 데이터 테이블을 만들때 Name은 ID와 같은것
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
@@ -34,7 +34,7 @@ public:
 		float Attack;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
-		float Speed;
+		int32 DropExp;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
 		int32 NextExp;
@@ -47,7 +47,7 @@ struct FCSMonsterStatData :public FTableRowBase
 	GENERATED_BODY()
 
 public:
-	FCSMonsterStatData() :Name("02020002_m_redmushroom"), MonsterName("Redmushroom"), MaxHP(100.0f), Attack(10.0f), DropExp(10), Speed(400){}
+	FCSMonsterStatData() :Name("02020002_m_redmushroom"), MonsterName("Redmushroom"), MaxHP(100.0f), Attack(10.0f), DropExp(10) {}
 
 	//제이슨으로 데이터 테이블을 만들때 Name은 ID와 같은것
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
@@ -64,9 +64,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
 		int32 DropExp;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Data)
-		float Speed;
 };
 
 

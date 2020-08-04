@@ -20,11 +20,9 @@ public:
 	UFUNCTION()
 	void SetMonsterName(FString InMonsterName);
 
-	//float GetAttack();
-
 private:
 	UPROPERTY(EditInstanceOnly, Category = Stat, Meta = (AllowPrivateAccess = true))
 	FString MonsterName;
-	struct FCSMonsterStatData* CurrentMonsterStatData;
+	FCSMonsterStatData* CurrentMonsterStatData;
 
 };

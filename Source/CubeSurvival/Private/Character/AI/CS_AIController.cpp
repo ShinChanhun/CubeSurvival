@@ -24,40 +24,19 @@ ACS_AIController::ACS_AIController()
 		BTMonsterAsset = BTMonsterObject.Object;
 	}
 }
-void ACS_AIController::BeginPlay()
-{
-	Super::BeginPlay();
 
-}
 
 
 void ACS_AIController::Possess(APawn* InPawn)
 {
 	Super::Possess(InPawn);
 
-	RunAI();
-}
-
-
-void ACS_AIController::RunAI()
-{
-
 	if (UseBlackboard(BBMonsterAsset, Blackboard))
 	{
-		
-		Blackboard->SetValueAsVector(HomePosKey, GetPawn()->GetActorLocation());
+		Blackboard->SetValueAsVector(HomePosKey, InPawn->GetActorLocation());
 		if (!RunBehaviorTree(BTMonsterAsset))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("AIController couldn't run behavior tree"));
 		}
-	}
-}
-
-void ACS_AIController::StopAI()
-{
-	auto BehaviorTreeComponent = Cast<UBehaviorTreeComponent>(BrainComponent);
-	if (BehaviorTreeComponent != nullptr)
-	{
-		BehaviorTreeComponent->StopTree(EBTStopMode::Safe);
 	}
 }

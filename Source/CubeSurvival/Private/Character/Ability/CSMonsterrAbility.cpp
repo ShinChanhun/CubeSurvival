@@ -22,8 +22,6 @@ void UCSMonsterrAbility::SetMonsterName(FString InMonsterName)
 		MonsterName = CurrentMonsterStatData->MonsterName;
 		MaxHP = CurrentMonsterStatData->MaxHP;
 		Attack = CurrentMonsterStatData->Attack;
-		Exp = CurrentMonsterStatData->DropExp;
-		Speed = CurrentMonsterStatData->Speed;
 		SetHP(MaxHP);
 	}
 	else
@@ -31,8 +29,3 @@ void UCSMonsterrAbility::SetMonsterName(FString InMonsterName)
 		CSLOG(Error, TEXT("Name (%s) data donsn't exist"), *CurrentMonsterStatData->Name);
 	}
 }
-
-//float UCSMonsterrAbility::GetAttack()
-//{
-//	return CurrentMonsterStatData->Attack;
-//}

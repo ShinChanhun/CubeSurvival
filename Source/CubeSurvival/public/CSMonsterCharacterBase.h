@@ -35,8 +35,6 @@ public:
 	virtual void MonsterSpawn(AActor* Owner, FVector Orgin, float LimitSizeX, float LimitSizeY, int MonsterNum, bool bRndRot){}
 
 	void Jump();
-
-	int32 GetExp() const;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -47,7 +45,7 @@ public:
 	
 	TArray<FString> MonsterNameArray;
 
-	UPROPERTY(VisibleAnywhere, Category = Ability)
+	UPROPERTY(EditAnywhere, Category = Ability)
 	class UCSMonsterrAbility* MonsterAbility;
 
 
@@ -57,7 +55,4 @@ public:
 
 private:
 	TMap<FString, MonsterSize> MonsterScale;
-
-	UPROPERTY()
-	class UCSGameInstance* CSGameInstance;
 };

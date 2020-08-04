@@ -27,11 +27,6 @@ void UCSCharacterAbilityManagement::SetHP(float NewHP)
 	}
 }
 
-void UCSCharacterAbilityManagement::SetSpeed(float NewSpeed)
-{
-	Speed = NewSpeed;
-}
-
 float UCSCharacterAbilityManagement::GetAttack()
 {
 	return Attack;

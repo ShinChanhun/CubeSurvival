@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CSPlayerAbility.h"
-#include "CSCharacterStatDataManager.h"
 #include "CSGameInstance.h"
-
+#include "CSCharacterStatDataManager.h"
 
 
 
@@ -28,7 +27,6 @@ void UCSPlayerAbility::SetNewLevel(int32 NewLevel)
 		Level = NewLevel;
 		MaxHP = CurrentPlayerStatData->MaxHP;
 		Attack = CurrentPlayerStatData->Attack;
-		Speed = CurrentPlayerStatData->Speed;
 		SetHP(CurrentPlayerStatData->MaxHP);
 	}
 	else
@@ -37,9 +35,3 @@ void UCSPlayerAbility::SetNewLevel(int32 NewLevel)
 	}
 	
 }
-
-
-//float UCSPlayerAbility::GetAttack()
-//{
-//	return CurrentPlayerStatData->Attack;
-//}
